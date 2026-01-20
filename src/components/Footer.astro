@@ -1,0 +1,127 @@
+---
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+
+  const footerLinks = {
+    solutions: [
+    { name: 'Over the phone Interpretation', href: '#' },
+    { name: 'Video Remote Interpretation', href: '#' },
+    { name: 'Sign Language Interpretation', href: '#' },
+    { name: 'Customers Service', href: '#' },
+    { name: 'Sales Generation', href: '#' },
+    { name: 'Technical Support', href: '#' },
+    { name: 'Chat Support', href: '#' },
+    { name: 'Omnichannel', href: '#' },
+    { name: 'Social Media Support', href: '#' }],
+
+    startups: [
+    { name: 'Human Resources outsourcing', href: '#' },
+    { name: 'Payroll Processing', href: '#' },
+    { name: 'Billing Support', href: '#' },
+    { name: 'Back-office Support', href: '#' },
+    { name: 'Virtual Assistant', href: '#' },
+    { name: 'Chatbot', href: '#' }],
+
+    company: [
+    { name: 'About the company', href: '#' },
+    { name: 'Contact the company', href: '#' },
+    { name: 'Help Center', href: '#' },
+    { name: 'Careers', href: '#' },
+    { name: 'Kalam Pulse', href: '#' },
+    { name: 'Kalam Connect', href: '#' },
+    { name: 'Login', href: '#' }]
+
+  };
+---
+    <footer class="bg-[#141414] text-white pt-[60px] md:pt-[80px] lg:pt-[100px] pb-[30px] md:pb-[40px] lg:pb-[60px]">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-[1280px]">
+        <div class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-12 mb-12 md:mb-16">
+          <div class="lg:w-1/4">
+            <div class="mb-4 md:mb-6">
+              <div class="w-[45px] h-[45px] md:w-[55px] md:h-[55px] bg-[#00005a] rounded-[12px] md:rounded-[14px] flex items-center justify-center">
+                <span class="text-white text-xl md:text-2xl font-bold">D</span>
+              </div>
+            </div>
+            <p class="text-[14px] md:text-[16px] leading-[1.5] text-white/75 max-w-[280px]">
+              Your Virtual BPO Destination for a Revolutionary Customer Experience
+            </p>
+          </div>
+
+          <div class="lg:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-6">
+            <div>
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Solutions</h4>
+              <ul class="space-y-2 md:space-y-3">
+                {footerLinks.solutions.map((link) =>
+                <li>
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                      {link.name}
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Start-ups</h4>
+              <ul class="space-y-2 md:space-y-3">
+                {footerLinks.startups.map((link) =>
+                <li>
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                      {link.name}
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Company</h4>
+              <ul class="space-y-2 md:space-y-3">
+                {footerLinks.company.map((link) =>
+                <li>
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                      {link.name}
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-6 md:pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+            <div class="flex items-center gap-4 md:gap-6 order-2 md:order-1">
+              <div class="relative w-[120px] md:w-[160px] h-[50px] md:h-[70px]">
+                <img
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/images/67956a6ee901cfb181d4f8e4_iso-marks-18.avif"
+                  alt="ISO 9001 Certified"
+                  class="object-contain object-left" />
+
+              </div>
+            </div>
+
+            <div class="text-[12px] md:text-[13px] text-white/50 order-3 md:order-2">© 2026 Defrilex. All rights reserved
+
+            </div>
+
+            <div class="flex items-center gap-2 order-1 md:order-3">
+              <a href="#" class="w-[34px] h-[34px] md:w-[38px] md:h-[38px] bg-[#00005a] rounded-lg flex items-center justify-center hover:bg-[#00007a] transition-colors">
+                <Facebook className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
+              </a>
+              <a href="#" class="w-[34px] h-[34px] md:w-[38px] md:h-[38px] bg-[#00005a] rounded-lg flex items-center justify-center hover:bg-[#00007a] transition-colors">
+                <Instagram className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
+              </a>
+              <a href="#" class="w-[34px] h-[34px] md:w-[38px] md:h-[38px] bg-[#00005a] rounded-lg flex items-center justify-center hover:bg-[#00007a] transition-colors">
+                <Linkedin className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
+              </a>
+              <a href="#" class="w-[34px] h-[34px] md:w-[38px] md:h-[38px] bg-[#00005a] rounded-lg flex items-center justify-center hover:bg-[#00007a] transition-colors">
+                <span class="font-bold text-xs md:text-sm text-white">𝕏</span>
+              </a>
+              <a href="#" class="w-[34px] h-[34px] md:w-[38px] md:h-[38px] bg-[#00005a] rounded-lg flex items-center justify-center hover:bg-[#00007a] transition-colors">
+                <Youtube className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>

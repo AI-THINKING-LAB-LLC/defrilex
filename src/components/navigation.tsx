@@ -301,14 +301,14 @@ export default function Navigation() {
         <div className="container mx-auto max-w-7xl flex justify-center">
           <div
             ref={navRef}
-            className={`relative flex items-center justify-between w-full max-w-240 h-[70px] md:h-[75px] bg-[#00003d] rounded-[15px] pl-6 md:pl-10 pr-4 md:pr-5 transition-all duration-300 ${
+            className={`relative flex items-center justify-between w-full max-w-240 h-17.5 md:h-18.75 bg-[#00003d] rounded-[15px] pl-6 md:pl-10 pr-4 md:pr-5 transition-all duration-300 ${
               isScrolled ? "scale-[0.97] shadow-2xl" : "scale-100"
             }`}
           >
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <a
                 href="/"
-                className="inline-block relative w-[100px] md:w-[130px] h-9 md:h-10"
+                className="inline-block relative w-25 md:w-32.5 h-9 md:h-10"
               >
                 <img
                   src="/logo_dark.png"
@@ -318,7 +318,7 @@ export default function Navigation() {
               </a>
             </div>
 
-            <nav className="hidden lg:flex flex-grow items-center justify-center">
+            <nav className="hidden lg:flex grow items-center justify-center">
               <ul className="flex items-center space-x-1">
                 <li>
                   <button
@@ -379,7 +379,7 @@ export default function Navigation() {
               </ul>
             </nav>
 
-            <div className="flex-shrink-0 relative flex items-center gap-3">
+            <div className="shrink-0 relative flex items-center gap-3">
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -393,7 +393,7 @@ export default function Navigation() {
                 onClick={() =>
                   setActiveMenu(activeMenu === "signin" ? null : "signin")
                 }
-                className="relative group inline-flex items-center justify-center gap-2 px-5 md:px-8 h-[42px] md:h-[45px] bg-[#141414] rounded-full overflow-hidden transition-all duration-300"
+                className="relative group inline-flex items-center justify-center gap-2 px-5 md:px-8 h-10.5 md:h-11.25 bg-[#141414] rounded-full overflow-hidden transition-all duration-300"
               >
                 <span className="relative z-10 text-white text-[13px] md:text-[14px] font-semibold tracking-wide">
                   Sign In
@@ -405,7 +405,7 @@ export default function Navigation() {
               </button>
 
               {activeMenu === "signin" && (
-                <div className="absolute top-full right-0 mt-2 w-[220px] bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-[1001]">
+                <div className="absolute top-full right-0 mt-2 w-55 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-1001">
                   <a
                     href="https://defrilex.interpretmanager.com/ng/#/app/account/sign-in"
                     target="_blank"
@@ -488,7 +488,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-[#00003d] z-[998] lg:hidden pt-[120px] px-6 overflow-y-auto">
+        <div className="fixed inset-0 bg-[#00003d] z-998 lg:hidden pt-30 px-6 overflow-y-auto">
           <nav className="flex flex-col gap-2">
             <button
               onClick={() => {

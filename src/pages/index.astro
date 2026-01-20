@@ -2,11 +2,27 @@
 import Navigation from '../components/navigation';
 import Hero from '../components/hero.astro'
 import Layout from '../layouts/Layout.astro';
+import GatewayFeatures from '../components/gateway-features.astro';
+import SolutionsSection from '../components/solutions-section';
+import CertificationSection from '../components/certification-section.astro';
+import IndustriesSection from '../components/industries-section';
+import CoreValues from '../components/core-values.astro';
+import BusinessDifferently from '../components/business-differently';
+import ReadyToStart from '../components/ready-to-start.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
 	<main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load />
 	  <Hero/>
+	  <GatewayFeatures/>
+	  <SolutionsSection client:load/>
+	  <CertificationSection />
+	  <IndustriesSection client:load/>
+	  <CoreValues/>
+	  <BusinessDifferently client:load/>
+	  <ReadyToStart/>
+	  <Footer/>
 	 </main>
 </Layout>

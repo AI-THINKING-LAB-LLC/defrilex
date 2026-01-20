@@ -1,0 +1,76 @@
+---
+
+const features = [
+{
+  title: "Real Global Coverage",
+  description: "Our network spans 55+ countries with interpreters in 300+ languages. When you need to communicate across borders, we make it happen.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#FFDEB4]"
+},
+{
+  title: "Only Pay for What You Use",
+  description: "No rigid contracts or wasted resources. Our pay-per-consumption model means you scale up or down based on what your business actually needs.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#E5DBF5]"
+},
+{
+  title: "Professionals You Can Count On",
+  description: "Our team members are certified and trained to industry standards. You get quality and professionalism every time because your reputation depends on it.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#C1E1D2]"
+},
+{
+  title: "We Go Where Others Won't",
+  description: "From major cities to remote locations, our network reaches places that matter to your business. If you need coverage there, we're there.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#FFDEB4]"
+},
+{
+  title: "Always Available",
+  description: "Global operations mean 24/7 support. Day or night, weekend or holiday we're here when your business needs us.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#C1E1D2]"
+},
+{
+  title: "Your Goals Drive Our Work",
+  description: "We built Defrilex on trust and transparency. Tell us what you're trying to accomplish, and we'll customize our services to fit your specific requirements not the other way around.",
+  icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/icons/66e12b71791da61ffc8c2e22_Kalam_20Global_20Coverage-16.png",
+  bg: "bg-[#FFB4B4]"
+}];
+---
+<section class="py-20 md:py-30 bg-[#F1E9F9] px-4 md:px-6 lg:px-0">
+    <div class="container mx-auto max-w-7xl bg-white rounded-3xl p-6 md:p-10 lg:p-16 xl:p-20 shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+    <div class="max-w-full md:max-w-150 mb-10 md:mb-16">
+        <h2 class="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.2] mb-4 md:mb-6 tracking-[-0.02em]">Breaking Language Barriers for Global Businesses
+
+        </h2>
+        <p class="text-[15px] md:text-[18px] text-[#4A4A4A] leading-normal">We connect your company to the global market with multilingual BPO services that actually work no fluff, just reliable communication when and where you need it.
+
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-16">
+        {features.map((feature, index) =>
+        <div class="flex flex-col items-start text-left">
+            <div
+            class={`size-12 rounded-xl flex items-center justify-center mb-6 transition-transform hover:scale-110 ${feature.bg}`}>
+
+            <img
+            src={feature.icon}
+            alt={feature.title}
+            width={28}
+            height={28}
+            class="object-contain" />
+
+            </div>
+        <h3 class="text-[18px] md:text-[20px] font-bold text-[#1A1A1A] mb-3 md:mb-4 leading-[1.3] tracking-tight">
+                {feature.title}
+            </h3>
+            <p class="text-[14px] md:text-[16px] text-[#4A4A4A] leading-[1.6]">
+                {feature.description}
+            </p>
+        </div>
+        )}
+    </div>
+    </div>
+</section>

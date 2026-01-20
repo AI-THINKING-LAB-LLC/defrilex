@@ -1,0 +1,99 @@
+---
+import { Users, DollarSign, Calculator, Database, ArrowRight } from 'lucide-react';
+
+const services = [
+  { icon: Users, label: 'HR Outsourcing', color: '#10B981' },
+  { icon: DollarSign, label: 'Billing Support', color: '#3B82F6' },
+  { icon: Calculator, label: 'Payroll Processing', color: '#8B5CF6' },
+  { icon: Database, label: 'Backend Support', color: '#F59E0B' },
+];
+---
+
+<section class="relative w-full overflow-hidden bg-linear-to-br from-[#F0F0FF] via-[#E8E8FF] to-[#F5F0FF] py-[80px] md:py-[100px] lg:py-[140px]">
+    <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-20 left-10 w-48 md:w-72 h-48 md:h-72 bg-[#C1E1D2]/30 rounded-full blur-3xl" />
+    <div class="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-[#D1D1FF]/40 rounded-full blur-3xl" />
+    </div>
+
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-[1280px] relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div class="w-full lg:w-[55%] order-2 lg:order-1">
+        <div class="relative">
+            <div class="absolute -inset-4 bg-linear-to-r from-[#C1E1D2] to-[#D1D1FF] rounded-[32px] blur-2xl opacity-40" />
+            <div class="relative rounded-[20px] md:rounded-[28px] bg-linear-to-br from-[#C1E1D2] to-[#B8D9C7] p-5 md:p-8 lg:p-10 xl:p-12 shadow-xl">
+            <div class="mb-4 md:mb-6 inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#ef9c31] animate-pulse" />
+                <span class="text-[11px] md:text-[13px] font-bold text-[#1A1A1A] uppercase tracking-wider">Who we are</span>
+            </div>
+
+            <h2 class="mb-4 md:mb-6 text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[42px] font-extrabold leading-[1.1] tracking-tight text-[#1A1A1A]">
+                Our core values are the
+                <span class="block bg-linear-to-r from-[#2D5A3D] to-[#1A1A1A] bg-clip-text text-transparent">
+                foundation of our success
+                </span>
+            </h2>
+
+            <p class="mb-6 md:mb-8 text-[13px] md:text-[15px] lg:text-[16px] leading-[1.7] text-[#3A3A3A] max-w-[480px]">
+                Affordable, scalable & expert management for startups & established businesses from handling customer inquiries to backend operations.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
+                {services.map((service, index) => (
+                <div
+                    class="group relative flex items-center gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-white/70 backdrop-blur-sm p-3 md:p-4 transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                >
+                    <div 
+                    class="flex h-9 w-9 md:h-11 md:w-11 items-center justify-center rounded-lg md:rounded-xl transition-transform duration-300 group-hover:scale-110 flex-shrink-0"
+                    style={{ backgroundColor: `${service.color}20` }}
+                    >
+                    <service.icon className="h-4 w-4 md:h-5 md:w-5" style={{ color: service.color }} />
+                    </div>
+                    <span class="text-[12px] md:text-[14px] lg:text-[15px] font-semibold text-[#1A1A1A]">{service.label}</span>
+                </div>
+                ))}
+            </div>
+
+            <div class="pt-4 md:pt-6 border-t border-[#1A1A1A]/10">
+                <p class="text-[13px] md:text-[14px] lg:text-[15px] leading-[1.7] text-[#4A4A4A] mb-4 md:mb-6">
+                We believe in building strong relationships between businesses and their customers partnerships that drive mutual success and lasting growth.
+                </p>
+                <button class="group inline-flex items-center gap-2 text-[13px] md:text-[14px] font-bold text-[#1A1A1A] hover:text-[#2D5A3D] transition-colors">
+                Learn more about us
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="w-full lg:w-[45%] order-1 lg:order-2">
+        <div class="relative">
+            <div class="absolute -inset-6 bg-linear-to-tr from-[#ef9c31]/20 to-[#D1D1FF]/30 rounded-[40px] blur-2xl" />
+            <div class="relative aspect-4/5 w-full max-w-[320px] md:max-w-95 lg:max-w-105 mx-auto overflow-hidden rounded-[20px] md:rounded-[28px] shadow-2xl">
+            <img
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/79d6b238-278f-4c8e-a7ff-62656440c3cd-kalam-cx/assets/images/6691def44ce820cb90be70f2_Jean_20Macedo_204_20Nov_2-13.avif"
+                alt="Smiling professional team member"
+                class="object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/30 via-transparent to-transparent" />
+            </div>
+            
+            <div class="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 lg:-bottom-6 lg:-left-6 bg-white rounded-xl md:rounded-2xl p-3 md:p-4 shadow-xl">
+            <div class="flex items-center gap-2 md:gap-3">
+                <div class="flex -space-x-2">
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#C1E1D2] border-2 border-white flex items-center justify-center text-[8px] md:text-[10px] font-bold">D</div>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#D1D1FF] border-2 border-white flex items-center justify-center text-[8px] md:text-[10px] font-bold">E</div>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#ef9c31]/30 border-2 border-white flex items-center justify-center text-[8px] md:text-[10px] font-bold">F</div>
+                </div>
+                <div>
+                <p class="text-[10px] md:text-[12px] font-bold text-[#1A1A1A]">500+ Clients</p>
+                <p class="text-[8px] md:text-[10px] text-[#6A6A6A]">Trust Defrilex</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
