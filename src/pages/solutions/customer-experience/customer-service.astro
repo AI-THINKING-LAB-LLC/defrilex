@@ -1,0 +1,241 @@
+---
+
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { Headphones, Users, Clock, BarChart3, ShoppingCart, Building2, HeartPulse, CheckCircle, ArrowRight, Award } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Users,
+    title: "Trained Brand Ambassadors",
+    description: "Our agents are immersed in your brand, products, and values—representing your company as if they were your own employees."
+  },
+  {
+    icon: Clock,
+    title: "24/7/365 Availability",
+    description: "Round-the-clock coverage ensures your customers always reach a live, knowledgeable representative when they need help."
+  },
+  {
+    icon: BarChart3,
+    title: "Data-Driven Optimization",
+    description: "Real-time analytics and regular reporting help identify trends, improve processes, and elevate customer satisfaction scores."
+  },
+  {
+    icon: Headphones,
+    title: "Multichannel Support",
+    description: "Phone, email, chat, and social media—we meet your customers wherever they prefer to communicate."
+  }
+];
+
+const industries = [
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce & Retail",
+    description: "Order inquiries, returns processing, product questions, and loyalty program support.",
+    color: "#10B981"
+  },
+  {
+    icon: Building2,
+    title: "SaaS & Technology",
+    description: "Subscription management, onboarding assistance, feature inquiries, and account support.",
+    color: "#3B82F6"
+  },
+  {
+    icon: HeartPulse,
+    title: "Healthcare & Insurance",
+    description: "Appointment scheduling, benefits inquiries, claims status, and patient support.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "Reduce average handle time by up to 40%",
+  "First-call resolution rates above 85%",
+  "CSAT scores consistently above 90%",
+  "Scalable teams that grow with your business",
+  "Multilingual support in 50+ languages",
+  "Dedicated account management and QA"
+];
+---
+
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#FFF7ED] via-[#FEF3E2] to-[#FDF2F8]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#F97316]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#FB923C]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#F97316]/10 px-5 py-2.5 mb-8">
+            <Headphones className="w-4 h-4 text-[#F97316]" />
+            <span class="text-[13px] font-bold text-[#F97316] uppercase tracking-wider">Customer Experience</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Customer Service
+            <span class="block text-[#F97316]">That Delights</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Top-tier, responsive, knowledgeable teams that transform every customer interaction into an opportunity to build loyalty and drive satisfaction.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#F97316] transition-colors duration-300 text-center text-[15px]"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="#solution"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#F97316] hover:text-[#F97316] transition-all duration-300 text-center text-[15px]"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                The <span class="text-[#F97316]">Solution</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Your customers deserve more than scripted responses and endless hold times. Our customer service teams are trained to think, empathize, and solve problems—not just follow flowcharts.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                We recruit for emotional intelligence and train for excellence. Every agent undergoes comprehensive product training, cultural alignment sessions, and ongoing quality coaching to ensure they represent your brand with the care and expertise your customers expect.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                Whether you need overflow support during peak seasons or a fully outsourced customer service operation, we scale seamlessly while maintaining the quality standards that define your brand.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#F97316] to-[#EA580C] rounded-3xl p-10 md:p-12 text-white">
+                <Award className="w-12 h-12 mb-6" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Our Promise</h3>
+                <p class="text-white/90 leading-[1.7] mb-6">
+                  Every customer interaction is an opportunity. We treat your customers like our own, because their satisfaction is the foundation of your growth—and ours.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">90%+</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">CSAT Score</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">85%+</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">First Call Resolution</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Key <span class="text-[#F97316]">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Everything you need to deliver world-class customer service, without the operational headaches.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-[#FFFBF7] rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300 border border-[#F97316]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#F97316]/10 flex items-center justify-center mb-6 group-hover:bg-[#F97316] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#F97316] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#FFF7ED] via-[#FEF3E2] to-[#FFFBEB]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Industry Applications
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Our customer service solutions adapt to the unique demands of your industry.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Why Partner With <span class="text-[#F97316]">Defrilex</span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div class="flex items-start gap-3 bg-white rounded-2xl p-5 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Let Us Handle Your Customer Service
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Stop worrying about staffing, training, and quality management. Focus on growing your business while we deliver the exceptional customer experiences your brand deserves.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#F97316] text-white font-semibold rounded-full hover:bg-[#EA580C] transition-colors duration-300 text-[16px]"
+          >
+            Request a Custom Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free consultation • No commitment required • Response within 24 hours
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

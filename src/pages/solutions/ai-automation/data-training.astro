@@ -1,0 +1,263 @@
+---
+import { ArrowRight, CheckCircle, CheckSquare, Database, Eye, Layers, Shield, Tag, Users } from "lucide-react";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/navigation";
+import Layout from "../../layouts/Layout.astro";
+
+const howItWorks = [
+  {
+    step: "01",
+    title: "Data Collection",
+    description: "We gather, organize, and prepare raw data from your sources—text, images, audio, or video—ensuring proper formatting for annotation."
+  },
+  {
+    step: "02",
+    title: "Expert Annotation",
+    description: "Our trained annotators label your data with precision—bounding boxes, classifications, entity tagging, sentiment, intent, and more."
+  },
+  {
+    step: "03",
+    title: "Quality Verification",
+    description: "Multi-tier review process with inter-annotator agreement checks ensures accuracy rates above 98% before delivery."
+  }
+];
+
+const humanEdge = [
+  {
+    icon: Users,
+    title: "Expert Annotators",
+    description: "Domain-specialized human experts who understand context, nuance, and edge cases that automated tools miss."
+  },
+  {
+    icon: Eye,
+    title: "Multi-Level QA",
+    description: "Every annotation passes through multiple human reviewers with disagreement resolution protocols for maximum accuracy."
+  },
+  {
+    icon: Shield,
+    title: "Edge Case Handling",
+    description: "Humans excel at ambiguous cases, cultural context, and novel scenarios that pure automation struggles with."
+  },
+  {
+    icon: CheckSquare,
+    title: "Continuous Feedback",
+    description: "Our annotators learn from model errors and iterate on guidelines, improving data quality over time."
+  }
+];
+
+const dataTypes = [
+  {
+    title: "Text Annotation",
+    items: ["Named Entity Recognition", "Sentiment Analysis", "Intent Classification", "Text Summarization", "Question-Answer Pairs"]
+  },
+  {
+    title: "Image Annotation",
+    items: ["Bounding Boxes", "Semantic Segmentation", "Polygon Annotation", "Keypoint Detection", "Image Classification"]
+  },
+  {
+    title: "Audio & Video",
+    items: ["Speech Transcription", "Speaker Diarization", "Video Object Tracking", "Action Recognition", "Temporal Segmentation"]
+  }
+];
+
+const businessImpact = [
+  "98%+ annotation accuracy guaranteed",
+  "50% faster than in-house annotation",
+  "Scale to millions of data points",
+  "Domain-specific expertise available",
+  "Secure, compliant data handling",
+  "Flexible pricing models"
+];
+---
+
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]" />
+        <div class="absolute top-20 right-20 w-80 h-80 bg-[#F97316]/20 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-[#FBBF24]/20 rounded-full blur-3xl" />
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#F97316]/20 px-5 py-2.5 mb-8 border border-[#F97316]/30">
+            <Database className="w-4 h-4 text-[#F97316]" />
+            <span class="text-[13px] font-bold text-[#F97316] uppercase tracking-wider">AI Automation</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-white leading-[1.05] tracking-[-0.02em] mb-8">
+            Data for AI
+            <span class="block bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">That Performs</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-white/70 max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            High-quality datasets and human-verified annotation services to train AI models that actually work in production.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#cta"
+              class="w-full sm:w-auto px-10 py-4.5 bg-gradient-to-r from-[#F97316] to-[#FBBF24] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 text-center text-[15px]"
+            >
+              Automate Your Workflow Today
+            </a>
+            <a
+              href="#how-it-works"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-center text-[15px]"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              How It <span class="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">Works</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              From raw data to production-ready training sets—our annotation pipeline ensures quality at every step.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {howItWorks.map((item, index) => (
+              <div class="relative">
+                <div class="text-[80px] font-bold text-[#F97316]/10 leading-none mb-4">{item.step}</div>
+                <h3 class="text-[22px] md:text-[24px] font-bold text-[#1A1A1A] mb-3">{item.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{item.description}</p>
+                {index < howItWorks.length - 1 && (
+                  <div class="hidden md:block absolute top-16 right-0 w-12 h-0.5 bg-gradient-to-r from-[#F97316] to-transparent" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#FFF7ED] via-[#FFEDD5] to-[#FED7AA]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              The Human <span class="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">Edge</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[650px] mx-auto leading-[1.7]">
+              AI is only as good as its training data. Our human annotators ensure your models learn from accurate, consistent, high-quality labels.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {humanEdge.map((item, index) => (
+              <div 
+                class="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#F97316]/10 flex items-center justify-center mb-6 group-hover:bg-[#F97316] transition-colors duration-300">
+                  <item.icon className="w-7 h-7 text-[#F97316] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{item.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Annotation <span class="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Comprehensive labeling services across all data modalities for any AI/ML use case.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {dataTypes.map((category, index) => (
+              <div class="bg-[#F8FAFC] rounded-3xl p-8">
+                <h3 class="text-[20px] font-bold text-[#1A1A1A] mb-6">{category.title}</h3>
+                <ul class="space-y-3">
+                  {category.items.map((item, idx) => (
+                    <li class="flex items-center gap-3">
+                      <Tag className="w-4 h-4 text-[#F97316]" />
+                      <span class="text-[15px] text-[#4A4A4A]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                Business <span class="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">Impact</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.7] mb-8">
+                Quality training data is the foundation of successful AI. Our annotation services accelerate your ML pipeline while ensuring the accuracy your models need.
+              </p>
+              <div class="space-y-4">
+                {businessImpact.map((impact, index) => (
+                  <div class="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#F97316] flex-shrink-0 mt-0.5" />
+                    <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{impact}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-10 md:p-12 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-[#F97316]/20 rounded-full blur-3xl" />
+                <Layers className="w-12 h-12 text-[#F97316] mb-6 relative z-10" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4 relative z-10">Data Quality Guarantee</h3>
+                <p class="text-white/70 leading-[1.7] mb-8 relative z-10">
+                  Our rigorous QA process and expert annotators ensure your AI models train on data that's accurate, consistent, and production-ready.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10 relative z-10">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">98%+</p>
+                    <p class="text-[13px] text-white/50 uppercase tracking-wider">Accuracy Rate</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">50%</p>
+                    <p class="text-[13px] text-white/50 uppercase tracking-wider">Faster Delivery</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Train Better Models?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Get high-quality annotated data that powers AI models you can trust. From datasets to custom annotation pipelines—we've got you covered.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#F97316] to-[#FBBF24] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 text-[16px]"
+          >
+            Automate Your Workflow Today
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free pilot project • No commitment • Custom annotation guidelines
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

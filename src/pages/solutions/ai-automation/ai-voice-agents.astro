@@ -1,0 +1,218 @@
+---
+import { ArrowRight, Brain, CheckCircle, Clock, Headphones, Phone, Settings, Zap } from "lucide-react";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/navigation";
+import Layout from "../../layouts/Layout.astro";
+
+const howItWorks = [
+  {
+    step: "01",
+    title: "Call Routing",
+    description: "Incoming calls are intelligently routed based on caller intent, detected through natural language understanding in the first few seconds."
+  },
+  {
+    step: "02",
+    title: "AI Conversation",
+    description: "Our voice AI engages in natural, human-like conversation—answering questions, gathering information, and resolving issues autonomously."
+  },
+  {
+    step: "03",
+    title: "Smart Escalation",
+    description: "Complex calls are seamlessly transferred to human agents with full context, ensuring smooth handoffs when needed."
+  }
+];
+
+const features = [
+  {
+    icon: Brain,
+    title: "Natural Conversations",
+    description: "Advanced speech recognition and natural language processing enable fluid, human-like interactions that callers can't distinguish from real agents."
+  },
+  {
+    icon: Clock,
+    title: "Zero Wait Time",
+    description: "Every call answered immediately. No hold queues, no IVR mazes, no frustrated customers—just instant, helpful assistance."
+  },
+  {
+    icon: Zap,
+    title: "Lightning Fast Resolution",
+    description: "AI agents process information and access systems in milliseconds, resolving inquiries faster than any human could."
+  },
+  {
+    icon: Settings,
+    title: "Deep Integrations",
+    description: "Connect with your CRM, ticketing system, knowledge base, and backend systems for real-time data access and updates."
+  }
+];
+
+const businessImpact = [
+  "Handle 10x more calls without adding staff",
+  "Reduce average handle time by 60%",
+  "24/7 availability without overtime costs",
+  "Consistent quality on every single call",
+  "Instant scaling for peak volumes",
+  "Detailed analytics on every conversation"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#8B5CF6]/20 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#EC4899]/20 rounded-full blur-3xl" />
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/20 px-5 py-2.5 mb-8 border border-[#8B5CF6]/30">
+            <Phone className="w-4 h-4 text-[#8B5CF6]" />
+            <span class="text-[13px] font-bold text-[#8B5CF6] uppercase tracking-wider">AI Automation</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-white leading-[1.05] tracking-[-0.02em] mb-8">
+            AI Voice Agents
+            <span class="block bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">That Sound Human</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-white/70 max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Intelligent voice AI that handles calls naturally, efficiently, and at scale—delivering exceptional experiences while dramatically reducing costs.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#cta"
+              class="w-full sm:w-auto px-10 py-4.5 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 text-center text-[15px]"
+            >
+              Automate Your Workflow Today
+            </a>
+            <a
+              href="#how-it-works"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-center text-[15px]"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              How It <span class="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Works</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Our voice AI handles the entire call flow—from greeting to resolution—with natural conversation.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {howItWorks.map((item, index) => (
+              <div class="relative">
+                <div class="text-[80px] font-bold text-[#8B5CF6]/10 leading-none mb-4">{item.step}</div>
+                <h3 class="text-[22px] md:text-[24px] font-bold text-[#1A1A1A] mb-3">{item.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{item.description}</p>
+                {index < howItWorks.length - 1 && (
+                  <div class="hidden md:block absolute top-16 right-0 w-12 h-0.5 bg-gradient-to-r from-[#8B5CF6] to-transparent" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#F5F3FF] via-[#EDE9FE] to-[#DDD6FE]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Intelligent <span class="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              State-of-the-art voice AI that transforms phone support from a cost center into a competitive advantage.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div
+                class="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#EC4899]/10 flex items-center justify-center mb-6 group-hover:from-[#8B5CF6] group-hover:to-[#EC4899] transition-all duration-300">
+                  <feature.icon className="w-7 h-7 text-[#8B5CF6] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                Business <span class="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">Impact</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.7] mb-8">
+                Transform your call center economics. AI voice agents deliver better customer experiences at a fraction of the cost of traditional staffing.
+              </p>
+              <div class="space-y-4">
+                {businessImpact.map((impact, index) => (
+                  <div class="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{impact}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-10 md:p-12 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-[#8B5CF6]/20 rounded-full blur-3xl" />
+                <Headphones className="w-12 h-12 text-[#8B5CF6] mb-6 relative z-10" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4 relative z-10">Call Center Revolution</h3>
+                <p class="text-white/70 leading-[1.7] mb-8 relative z-10">
+                  Handle unlimited call volume with consistent quality. Our AI never has a bad day, never needs breaks, and never forgets a detail.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10 relative z-10">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">10x</p>
+                    <p class="text-[13px] text-white/50 uppercase tracking-wider">Call Capacity</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">60%</p>
+                    <p class="text-[13px] text-white/50 uppercase tracking-wider">Faster Resolution</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Transform Your Calls?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Deploy AI voice agents that handle calls naturally and efficiently. See the future of customer service in action.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 text-[16px]"
+          >
+            Automate Your Workflow Today
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free demo call • No commitment • Deploy in 3 weeks
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

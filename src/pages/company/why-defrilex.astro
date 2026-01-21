@@ -1,0 +1,372 @@
+---
+
+import { ArrowRight, Award, Bot, Briefcase, Building2, Check, Clock, DollarSign, Heart, Scale, Shield, Target, TrendingUp, X, Zap } from "lucide-react";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/navigation";
+import Layout from "../../layouts/Layout.astro";
+
+const whatMakesUsDifferent = [
+{
+  icon: TrendingUp,
+  title: "We've Actually Built a Seven-Figure BPO",
+  description: "Defrilex isn't a startup with a pitch deck. Since 2015, we've grown to seven-figure revenue serving healthcare, legal, and government clients across 55+ countries. We know what works because we've done it—repeatedly, reliably, at scale."
+},
+{
+  icon: Target,
+  title: "We Only Take on Work We Can Deliver",
+  description: "Some BPOs say yes to everything and scramble to figure it out later. We don't. If we commit to your project, it's because we have the certified interpreters, the compliance infrastructure, and the operational capacity to deliver what you need. No bait-and-switch. No excuses."
+},
+{
+  icon: Heart,
+  title: "You Work With People Who Care",
+  description: "At Defrilex, you won't get lost in layers of bureaucracy or handed off to junior account managers. Our leadership team is accessible, responsive, and personally invested in your outcomes. When you email our CEO, he actually responds. Try that with a Fortune 500 BPO."
+},
+{
+  icon: Shield,
+  title: "We're Built for Regulated Industries",
+  description: "Healthcare, legal, government—these aren't just buzzwords for us. We maintain GDPR, HIPAA, and PCI-DSS compliance because our clients demand it. We're currently working toward ISO 20000 and SOC 2 certification. Compliance isn't something we claim in marketing—it's baked into how we operate."
+},
+{
+  icon: DollarSign,
+  title: "Flexible Pricing That Makes Sense",
+  description: "Pay-per-consumption means you're not locked into expensive contracts for capacity you don't use. Need to scale up for a major project? Done. Quiet month? You're not paying for idle resources. We price based on what actually works for your business, not what maximizes our revenue."
+},
+{
+  icon: Clock,
+  title: "Real 24/7 Coverage",
+  description: "We don't just say we're available 24/7—we actually are. Healthcare emergencies happen at 2 AM. Legal matters don't wait for business hours. Government services run around the clock. Our global network ensures someone qualified is always available when you need them."
+},
+{
+  icon: Bot,
+  title: "Technology That Enhances, Not Replaces",
+  description: "Through AI Thinking Lab, we're developing AI tools that make our human interpreters more effective. But we're never replacing judgment, cultural understanding, and real communication skills with automation. The future isn't choosing between humans and technology—it's using both intelligently."
+}];
+
+
+const whoWeServe = [
+{
+  icon: Building2,
+  title: "Healthcare Providers",
+  description: "You need HIPAA-compliant interpretation services for patients who speak dozens of different languages. Mistakes aren't just inconvenient—they're dangerous. We get that. Our interpreters are certified, trained on medical terminology, and available 24/7."
+},
+{
+  icon: Scale,
+  title: "Legal Firms",
+  description: "You're handling sensitive cases where accurate translation can make or break outcomes. You need certified professionals who understand legal terminology and maintain strict confidentiality. That's exactly what we deliver."
+},
+{
+  icon: Briefcase,
+  title: "Government Agencies",
+  description: "You serve diverse populations and need multilingual support that meets strict compliance standards. Budget accountability matters. Reliability is non-negotiable. We've built our operations specifically for these requirements."
+},
+{
+  icon: Zap,
+  title: "Growing Businesses",
+  description: "You're expanding into new markets and need multilingual customer support without the overhead of building in-house teams. You want flexible contracts that scale with your growth. We've been there—we grew the same way."
+}];
+
+
+const whatYouGet = [
+{ label: "300+ Languages", desc: "From common to rare, we cover what you actually need" },
+{ label: "55+ Countries", desc: "Global reach with local expertise" },
+{ label: "Certified Professionals", desc: "Trained, vetted, and qualified for your industry" },
+{ label: "Compliance-Ready", desc: "GDPR, HIPAA, PCI-DSS (ISO 20000 and SOC 2 in progress)" },
+{ label: "24/7 Availability", desc: "Real coverage, not just an answering service" },
+{ label: "Flexible Contracts", desc: "Pay for what you use, scale as you grow" },
+{ label: "Direct Access", desc: "Work with leadership that actually responds" },
+{ label: "Proven Track Record", desc: "Seven-figure revenue, 100+ satisfied clients" }];
+
+
+const comparison = [
+{ others: "Other BPOs promise everything.", us: "We deliver what we promise." },
+{ others: "Other BPOs have massive overhead.", us: "We pass cost savings to you through pay-per-consumption pricing." },
+{ others: "Other BPOs treat you like an account number.", us: "We treat you like a partner because your success is our success." },
+{ others: "Other BPOs chase the latest AI trends.", us: "We build technology that actually makes our human teams better." },
+{ others: "Other BPOs have complex approval processes.", us: "We make decisions quickly because our leadership is accessible." }];
+
+
+const chooseDefrilex = [
+"A proven track record in regulated industries",
+"Direct access to leadership that cares",
+"Flexible pricing that fits your business",
+"Compliance you can verify, not just claims",
+"Technology that enhances human expertise",
+"A partner focused on your outcomes, not just their revenue"];
+
+
+const dontChooseDefrilex = [
+"The absolute cheapest option (quality costs something)",
+"A massive corporate BPO with layers of bureaucracy",
+"A provider that says yes to everything without delivery capacity",
+"Bleeding-edge AI experiments with unproven results"];
+---
+<Layout>
+        <main class="min-h-screen bg-[#F8FAFC]">
+      <Navigation client:load/>
+      
+      <section class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#00003d] via-[#1E3A5F] to-[#3B82F6]" />
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#ef9c31]/10 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[900px] text-center">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 mb-8 border border-white/20">
+            <Award className="w-4 h-4 text-[#ef9c31]" />
+            <span class="text-[13px] font-bold text-white uppercase tracking-wider">Why Choose Us</span>
+          </div>
+          
+          <h1 class="text-[36px] sm:text-[46px] md:text-[54px] lg:text-[62px] font-bold text-white leading-[1.05] tracking-[-0.03em] mb-8">
+            Because Language Barriers
+            <span class="block text-[#ef9c31]">Shouldn't Cost You Business</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[20px] text-white/80 leading-[1.8] max-w-[700px] mx-auto mb-10">
+            You're here because you need reliable multilingual communication—and you've probably been burned by providers who overpromised and underdelivered. We get it. That's why we built Defrilex differently.
+          </p>
+          
+          <a
+            href="/company/contact"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-[#00003d] font-semibold rounded-full hover:bg-[#ef9c31] hover:text-white transition-colors duration-300 text-[16px]">
+
+            Let's Talk
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              What Makes Us <span class="text-[#3B82F6]">Different</span>
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whatMakesUsDifferent.map((item, index) =>
+            <div
+              class={`group bg-[#F8FAFC] rounded-3xl p-8 hover:bg-[#00003d] transition-all duration-300 ${index === 6 ? 'md:col-span-2 lg:col-span-1' : ''}`}>
+
+                <div class="w-14 h-14 rounded-2xl bg-[#3B82F6]/10 group-hover:bg-white/20 flex items-center justify-center mb-6 transition-colors duration-300">
+                  <item.icon className="w-7 h-7 text-[#3B82F6] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[18px] md:text-[20px] font-bold text-[#1A1A1A] group-hover:text-white mb-4 transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p class="text-[14px] md:text-[15px] text-[#4A4A4A] group-hover:text-white/80 leading-[1.7] transition-colors duration-300">
+                  {item.description}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#F8FAFC] to-[#EEF2FF]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              Who We're <span class="text-[#3B82F6]">Built For</span>
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {whoWeServe.map((item, index) =>
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#E5E5E5]">
+
+                <div class="w-14 h-14 rounded-2xl bg-[#00003d]/10 flex items-center justify-center mb-6">
+                  <item.icon className="w-7 h-7 text-[#00003d]" />
+                </div>
+                <h3 class="text-[20px] md:text-[24px] font-bold text-[#1A1A1A] mb-4">
+                  {item.title}
+                </h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.8]">
+                  {item.description}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-[#00003d]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] tracking-[-0.02em] mb-6">
+              What You Get With <span class="text-[#ef9c31]">Defrilex</span>
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {whatYouGet.map((item, index) =>
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
+
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-8 h-8 rounded-full bg-[#ef9c31] flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <h3 class="text-[16px] font-bold text-white !whitespace-pre-line">{item.label}</h3>
+                </div>
+                <p class="text-[14px] text-white/70 leading-[1.6] pl-11">{item.desc}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              The Defrilex <span class="text-[#3B82F6]">Difference</span>
+            </h2>
+          </div>
+          
+          <div class="space-y-6">
+            {comparison.map((item, index) =>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[#FEE2E2] rounded-2xl p-6 flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-[#EF4444] flex items-center justify-center flex-shrink-0">
+                    <X className="w-4 h-4 text-white" />
+                  </div>
+                  <p class="text-[15px] text-[#7F1D1D] leading-[1.6]">{item.others}</p>
+                </div>
+                <div class="bg-[#D1FAE5] rounded-2xl p-6 flex items-start gap-4">
+                  <div class="w-8 h-8 rounded-full bg-[#10B981] flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p class="text-[15px] text-[#065F46] leading-[1.6]">{item.us}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-[#F8FAFC]">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              Why Clients <span class="text-[#3B82F6]">Choose to Stay</span>
+            </h2>
+          </div>
+          
+          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-[#E5E5E5]">
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.9] mb-6">
+              Most of our growth comes from referrals and expanded contracts with existing clients. Why? Because we do what we say we'll do.
+            </p>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.9] mb-6">
+              When a healthcare provider calls at 2 AM needing a Somali interpreter, we deliver—every time. When a legal firm needs certified Spanish translation on a tight deadline, we make it happen. When a government agency needs multilingual call center support that meets compliance standards, we've already built the infrastructure.
+            </p>
+            <p class="text-[18px] md:text-[20px] text-[#1A1A1A] font-semibold leading-[1.7] border-l-4 border-[#ef9c31] pl-6">
+              We're not the cheapest option. We're not the biggest BPO. We're the one you can count on when quality, compliance, and reliability actually matter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[900px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              Founded on <span class="text-[#3B82F6]">Principles That Matter</span>
+            </h2>
+          </div>
+          
+          <div class="text-center">
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.9] mb-6">
+              Defrilex was founded by Fritz Gerald Zephirin, a Goldman Sachs 10KSB graduate and faith leader who built this company on integrity, excellence, and genuine service. Those aren't just words on a website—they're how we operate every day.
+            </p>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.9]">
+              We don't have flashy corporate giving campaigns to advertise. But we do have team members who take pride in their work and clients who stick with us because we deliver. Purpose isn't a marketing slogan for us—it's the foundation of how we built this business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#1E3A5F] via-[#2D5A87] to-[#3B82F6]">
+        <div class="max-w-[900px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Work With a BPO That Actually Delivers?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[650px] mx-auto leading-[1.7] mb-10">
+            If you need multilingual communication services where mistakes aren't an option, let's talk. No high-pressure sales tactics. No runaround. Just an honest conversation about whether Defrilex is the right fit for your needs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/company/contact"
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#1E3A5F] font-semibold rounded-full hover:bg-[#ef9c31] hover:text-white transition-colors duration-300 text-[16px]">
+
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="/solutions/remote-interpretation/opi"
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
+
+              See Our Services
+            </a>
+            <a
+              href="/company/our-team"
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
+
+              Meet Our Team
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1100px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em] mb-6">
+              The <span class="text-[#3B82F6]">Bottom Line</span>
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-[#D1FAE5] rounded-3xl p-8 md:p-10">
+              <h3 class="text-[20px] md:text-[24px] font-bold text-[#065F46] mb-6">
+                Choose Defrilex if you want:
+              </h3>
+              <ul class="space-y-4">
+                {chooseDefrilex.map((item, index) =>
+                <li class="flex items-start gap-4">
+                    <div class="w-6 h-6 rounded-full bg-[#10B981] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5 text-white" />
+                    </div>
+                    <span class="text-[15px] text-[#065F46] leading-[1.6]">{item}</span>
+                  </li>
+                )}
+              </ul>
+            </div>
+            
+            <div class="bg-[#FEE2E2] rounded-3xl p-8 md:p-10">
+              <h3 class="text-[20px] md:text-[24px] font-bold text-[#7F1D1D] mb-6">
+                Don't choose Defrilex if you want:
+              </h3>
+              <ul class="space-y-4">
+                {dontChooseDefrilex.map((item, index) =>
+                <li  class="flex items-start gap-4">
+                    <div class="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <X className="w-3.5 h-3.5 text-white" />
+                    </div>
+                    <span class="text-[15px] text-[#7F1D1D] leading-[1.6]">{item}</span>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+          
+          <p class="text-center text-[18px] md:text-[20px] text-[#1A1A1A] font-semibold mt-12">
+            We're clear about what we do well and who we serve best. If that's you—<a href="/company/contact" class="text-[#3B82F6] hover:text-[#ef9c31] transition-colors">let's talk</a>.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

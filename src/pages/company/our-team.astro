@@ -1,0 +1,152 @@
+---
+
+import { ArrowRight, Sparkles } from "lucide-react";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/navigation";
+import Layout from "../../layouts/Layout.astro";
+
+const leadershipTeam = [
+  {
+    name: "Fritz Gerald Zephirin",
+    role: "Chief Executive Officer & Founder",
+    initial: "FZ"
+  },
+  {
+    name: "Sarafina Belance",
+    role: "Chief Operating Officer",
+    initial: "SB"
+  },
+  {
+    name: "Melanie Roger",
+    role: "Chief Growth Officer",
+    initial: "MR"
+  },
+  {
+    name: "Xavier Navarro",
+    role: "Chief Revenue Officer",
+    initial: "XN"
+  },
+  {
+    name: "Zar Roger",
+    role: "Chief Financial Officer",
+    initial: "ZR"
+  }
+];
+---
+    <Layout>
+        <main class="min-h-screen bg-[#F8FAFC]">
+      <Navigation client:load/>
+      
+      <section class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-[160px] pb-[80px]">
+        <div class="absolute inset-0 bg-[#FAFAFA]" />
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAwM2QiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+        
+        <div class="container relative z-10 px-6 max-w-[1200px]">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <h1 class="text-[42px] sm:text-[52px] md:text-[62px] lg:text-[72px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.03em] mb-8">
+                Experience You Can Trust
+              </h1>
+              
+              <p class="text-[17px] md:text-[19px] text-[#4A4A4A] leading-[1.8] mb-6">
+                At Defrilex, we know that when you're handling healthcare communications, legal interpretations, or government services across 100+ languages, you need a team that actually knows what they're doing. We've built a seven-figure multilingual BPO by delivering reliable results for clients who can't afford mistakes.
+              </p>
+              
+              <p class="text-[17px] md:text-[19px] text-[#4A4A4A] leading-[1.8]">
+                We're not just your vendor—we're your partner in breaking language barriers and connecting you to global markets. Meet the leadership team that makes it happen.
+              </p>
+            </div>
+            
+            <div class="relative bg-[#FAFAFA] rounded-2xl overflow-hidden scale-125 origin-center">
+              <img 
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/79d6b238-278f-4c8e-a7ff-62656440c3cd/Gemini_Generated_Image_5x0bgn5x0bgn5x0b-resized-1768873289381.webp?width=8000&height=8000&resize=contain"
+                alt="Defrilex Global Multilingual Office"
+                class="w-full h-auto mix-blend-multiply"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="mb-16">
+            <h2 class="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-[1.1] tracking-[-0.02em]">
+              Leadership Team
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {leadershipTeam.map((member, index) => (
+              <div 
+                class="group bg-[#FAFAFA] rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-[#E5E5E5]"
+              >
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#00003d] to-[#3B82F6] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <span class="text-white text-[22px] font-bold">{member.initial}</span>
+                </div>
+                
+                <h3 class="text-[20px] font-bold text-[#1A1A1A] mb-2 leading-tight">
+                  {member.name}
+                </h3>
+                
+                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6">
+                  {member.role}
+                </p>
+                
+                <div class="flex items-center text-[#00003d] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#00003d] via-[#1E3A5F] to-[#3B82F6]">
+        <div class="max-w-[1000px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Work Together?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Connect with our team to discuss how Defrilex can solve your multilingual communication challenges.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-[#00003d] font-semibold rounded-full hover:bg-[#ef9c31] hover:text-white transition-colors duration-300 text-[16px]"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-[#FAFAFA]">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-[#E5E5E5]">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-[#00003d]/10 flex items-center justify-center">
+                <Sparkles className="w-7 h-7 text-[#00003d]" />
+              </div>
+              <h3 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A]">
+                Our Approach: Humans + Technology
+              </h3>
+            </div>
+            
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-8">
+              See how we combine trained professionals with smart AI tools to deliver better outcomes than either could alone.
+            </p>
+            
+            <a
+              href="/company/about"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-[#00003d] text-white font-semibold rounded-full hover:bg-[#ef9c31] transition-colors duration-300 text-[15px]"
+            >
+              Discover Our Approach
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+    </Layout>

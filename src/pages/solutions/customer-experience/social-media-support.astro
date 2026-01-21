@@ -1,0 +1,239 @@
+---
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { AtSign, MessageSquare, TrendingUp, Shield, ShoppingCart, Utensils, Plane, CheckCircle, ArrowRight, Heart } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: MessageSquare,
+    title: "Platform Expertise",
+    description: "Native fluency across Facebook, Instagram, Twitter/X, LinkedIn, TikTok, and emerging platforms—we speak each platform's language."
+  },
+  {
+    icon: TrendingUp,
+    title: "Community Growth",
+    description: "Beyond support—we help build engaged communities through strategic engagement, user-generated content, and authentic conversations."
+  },
+  {
+    icon: Shield,
+    title: "Crisis Management",
+    description: "24/7 monitoring with rapid response protocols for reputation threats, viral complaints, and PR situations."
+  },
+  {
+    icon: Heart,
+    title: "Brand Personality",
+    description: "Our agents embody your brand voice—whether that's professional, playful, or somewhere in between."
+  }
+];
+
+const industries = [
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce & D2C",
+    description: "Product questions, order issues, influencer engagement, and turning complaints into loyal customers.",
+    color: "#10B981"
+  },
+  {
+    icon: Utensils,
+    title: "Food & Hospitality",
+    description: "Reservation assistance, menu inquiries, review responses, and real-time complaint resolution.",
+    color: "#3B82F6"
+  },
+  {
+    icon: Plane,
+    title: "Travel & Leisure",
+    description: "Booking support, travel updates, itinerary changes, and handling the unexpected with empathy.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "Average response time under 15 minutes",
+  "Sentiment analysis and trend monitoring",
+  "Escalation protocols for viral situations",
+  "Multi-language social support",
+  "Detailed engagement analytics",
+  "Integration with your social management tools"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#FCE7F3] via-[#FBCFE8] to-[#F9A8D4]" />
+        <div class="absolute top-20 right-20 w-80 h-80 bg-[#EC4899]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-[#F472B6]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#EC4899]/10 px-5 py-2.5 mb-8">
+            <AtSign className="w-4 h-4 text-[#EC4899]" />
+            <span class="text-[13px] font-bold text-[#EC4899] uppercase tracking-wider">Customer Experience</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Social Media
+            <span class="block text-[#EC4899]">Support</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Engaging with customers on social platforms to build relationships, resolve concerns, and turn followers into brand advocates.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#EC4899] transition-colors duration-300 text-center text-[15px]"
+            >
+              Elevate Your Social
+            </a>
+            <a
+              href="#solution"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#EC4899] hover:text-[#EC4899] transition-all duration-300 text-center text-[15px]"
+            >
+              Our Approach
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                The <span class="text-[#EC4899]">Solution</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Social media isn't just another support channel—it's your most public one. Every interaction is a performance that shapes brand perception. A single well-handled complaint can go viral for the right reasons.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Our social media support teams understand the unique dynamics of each platform. They know when to take conversations private, when to respond publicly, and how to turn critics into advocates through genuine, empathetic engagement.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                Beyond reactive support, we help you build community through proactive engagement—responding to mentions, participating in relevant conversations, and creating the kind of brand presence that people actually want to interact with.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#EC4899] to-[#DB2777] rounded-3xl p-10 md:p-12 text-white">
+                <AtSign className="w-12 h-12 mb-6" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Social Done Right</h3>
+                <p class="text-white/90 leading-[1.7] mb-6">
+                  Every @mention is a chance to shine. Every comment is an opportunity to demonstrate your values. We help you make the most of every interaction.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">&lt;15min</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Avg Response</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">24/7</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Monitoring</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Key <span class="text-[#EC4899]">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Professional social media support that protects and enhances your brand.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-[#FDF2F8] rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300 border border-[#EC4899]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#EC4899]/10 flex items-center justify-center mb-6 group-hover:bg-[#EC4899] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#EC4899] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#FCE7F3] via-[#FBCFE8] to-[#F9A8D4]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Industry Applications
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Social media strategies tailored to your industry's conversation patterns.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Why Partner With <span class="text-[#EC4899]">Defrilex</span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div class="flex items-start gap-3 bg-white rounded-2xl p-5 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Outsource Your Social Support
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Your social channels never sleep—and neither should your support. Let us manage your social presence with the care and expertise your brand deserves.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#EC4899] text-white font-semibold rounded-full hover:bg-[#DB2777] transition-colors duration-300 text-[16px]"
+          >
+            Get Your Social Support Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free social audit • No commitment required • Launch in 1 week
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

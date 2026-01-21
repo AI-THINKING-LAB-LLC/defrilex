@@ -1,0 +1,241 @@
+---
+
+import { ArrowRight, BarChart3, Building2, CheckCircle, DollarSign, Laptop, ShoppingCart, Target, TrendingUp, Zap } from "lucide-react";
+import Footer from "../../../components/Footer.astro";
+import Navigation from "../../../components/navigation";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Target,
+    title: "Targeted Outreach",
+    description: "Data-driven prospecting and segmentation ensures your message reaches the right decision-makers at the right time."
+  },
+  {
+    icon: DollarSign,
+    title: "Revenue-Focused KPIs",
+    description: "We measure success by pipeline generated and deals closed—not just calls made. Your ROI is our primary metric."
+  },
+  {
+    icon: BarChart3,
+    title: "Real-Time Analytics",
+    description: "Live dashboards and detailed reporting give you complete visibility into campaign performance and conversion rates."
+  },
+  {
+    icon: Zap,
+    title: "Rapid Ramp-Up",
+    description: "Get your sales team operational in weeks, not months. Our proven onboarding process accelerates time-to-value."
+  }
+];
+
+const industries = [
+  {
+    icon: Laptop,
+    title: "SaaS & Technology",
+    description: "Demo scheduling, free trial conversions, subscription upsells, and enterprise account expansion.",
+    color: "#3B82F6"
+  },
+  {
+    icon: Building2,
+    title: "B2B Services",
+    description: "Lead qualification, appointment setting, proposal follow-ups, and contract renewals.",
+    color: "#10B981"
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce & D2C",
+    description: "Abandoned cart recovery, cross-sell campaigns, loyalty program enrollment, and win-back outreach.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "Average 3x ROI on outsourced sales investment",
+  "Conversion rates 25-40% above industry average",
+  "Multilingual sales teams for global expansion",
+  "CRM integration with Salesforce, HubSpot, and more",
+  "Compliance with TCPA, GDPR, and industry regulations",
+  "Flexible scaling for seasonal campaigns"
+];
+---
+
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#ECFDF5] via-[#D1FAE5] to-[#F0FDF4]" />
+        <div class="absolute top-20 right-20 w-80 h-80 bg-[#10B981]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-[#34D399]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#10B981]/10 px-5 py-2.5 mb-8">
+            <TrendingUp className="w-4 h-4 text-[#10B981]" />
+            <span class="text-[13px] font-bold text-[#10B981] uppercase tracking-wider">Customer Experience</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Sales Generation
+            <span class="block text-[#10B981]">That Delivers ROI</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Driving revenue growth through targeted and effective sales outreach strategies. Turn prospects into customers with proven conversion techniques.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#10B981] transition-colors duration-300 text-center text-[15px]"
+            >
+              Boost Your Sales
+            </a>
+            <a
+              href="#solution"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#10B981] hover:text-[#10B981] transition-all duration-300 text-center text-[15px]"
+            >
+              See Our Approach
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                The <span class="text-[#10B981]">Solution</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Sales is the engine of growth, but building and managing high-performing sales teams is expensive and time-consuming. We give you the horsepower without the overhead.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Our sales professionals are trained in consultative selling, objection handling, and closing techniques. They don't just read scripts—they build relationships, identify pain points, and position your solution as the answer.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                From cold outreach and lead qualification to appointment setting and deal closing, we handle the entire sales funnel—or plug into specific stages where you need reinforcement.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#10B981] to-[#059669] rounded-3xl p-10 md:p-12 text-white">
+                <DollarSign className="w-12 h-12 mb-6" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">ROI That Matters</h3>
+                <p class="text-white/90 leading-[1.7] mb-6">
+                  We're not in the business of making calls—we're in the business of generating revenue. Every campaign is designed with measurable ROI targets from day one.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">3x</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Average ROI</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">40%</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Higher Conversions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Key <span class="text-[#10B981]">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              A complete sales engine designed to accelerate your revenue growth.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-[#F0FDF4] rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300 border border-[#10B981]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#10B981]/10 flex items-center justify-center mb-6 group-hover:bg-[#10B981] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#10B981] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#ECFDF5] via-[#D1FAE5] to-[#F0FDF4]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Industry Applications
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Our sales strategies adapt to your market, audience, and sales cycle.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Why Partner With <span class="text-[#10B981]">Defrilex</span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div class="flex items-start gap-3 bg-white rounded-2xl p-5 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Accelerate Revenue?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Stop leaving money on the table. Let our sales professionals fill your pipeline and close more deals while you focus on delivering value to customers.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#10B981] text-white font-semibold rounded-full hover:bg-[#059669] transition-colors duration-300 text-[16px]"
+          >
+            Get Your Sales Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free ROI assessment • No commitment required • Start in 2 weeks
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+ </Layout>

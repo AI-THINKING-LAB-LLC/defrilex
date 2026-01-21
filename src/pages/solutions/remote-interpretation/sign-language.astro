@@ -1,0 +1,243 @@
+---
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { Hand, Video, Award, Clock, HeartPulse, Scale, GraduationCap, CheckCircle, ArrowRight, Heart } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Award,
+    title: "Certified Deaf Interpreters",
+    description: "All our ASL interpreters are RID-certified with specialized training in medical, legal, and technical terminology."
+  },
+  {
+    icon: Video,
+    title: "VRI & On-Site Options",
+    description: "Choose video remote interpretation for immediate access or schedule on-site interpreters for in-person events."
+  },
+  {
+    icon: Hand,
+    title: "Multiple Sign Languages",
+    description: "We support ASL, BSL, LSF, Auslan, and 50+ other sign languages to serve Deaf communities worldwide."
+  },
+  {
+    icon: Clock,
+    title: "On-Demand & Scheduled",
+    description: "Connect instantly for urgent needs or schedule interpreters in advance for planned appointments and events."
+  }
+];
+
+const useCases = [
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    description: "Patient appointments, emergency care, mental health sessions, surgical consultations, and discharge planning.",
+    color: "#10B981"
+  },
+  {
+    icon: Scale,
+    title: "Legal & Government",
+    description: "Court proceedings, depositions, DMV appointments, social services meetings, and police interviews.",
+    color: "#3B82F6"
+  },
+  {
+    icon: GraduationCap,
+    title: "Education & Events",
+    description: "Classroom instruction, IEP meetings, conferences, corporate training, and public events.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "RID-certified and NIC-certified interpreters",
+  "Deaf interpreters available for complex situations",
+  "HIPAA and ADA compliant services",
+  "24/7 emergency interpreter access",
+  "Specialized vocabulary training for your industry",
+  "Cultural mediation and advocacy support"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation client:load/>
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#F5F0FF] via-[#F0E8FF] to-[#E8E0FF]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#C084FC]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-5 py-2.5 mb-8">
+            <Hand className="w-4 h-4 text-[#8B5CF6]" />
+            <span class="text-[13px] font-bold text-[#8B5CF6] uppercase tracking-wider">Remote Interpretation</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Sign Language
+            <span class="block text-[#8B5CF6]">Interpretation</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Professional ASL and international sign language interpretation. Breaking communication barriers for the Deaf and hard-of-hearing community.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#8B5CF6] transition-colors duration-300 text-center text-[15px]"
+            >
+              Request a Quote
+            </a>
+            <a
+              href="#features"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 text-center text-[15px]"
+            >
+              Our Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              What Makes Our Service <span class="text-[#8B5CF6]">Exceptional</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              We understand that sign language interpretation is about more than words—it's about culture, context, and genuine connection.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#D1D1FF]/30"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#8B5CF6]/10 flex items-center justify-center mb-6 group-hover:bg-[#8B5CF6] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#8B5CF6] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#F3E8FF] via-[#EDE9FE] to-[#E8E0FF]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Ideal Use Cases
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Professional sign language interpretation for every situation where communication matters.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${useCase.color}15` }}
+                >
+                  <useCase.icon className="w-7 h-7" style={{ color: useCase.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{useCase.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                Why Choose <span class="text-[#8B5CF6]">Defrilex</span> for Sign Language
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.7] mb-8">
+                Our sign language interpretation team includes both hearing and Deaf interpreters who bring authentic cultural understanding to every interaction. We don't just interpret words—we bridge worlds.
+              </p>
+              <div class="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div class="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                    <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] rounded-3xl p-10 md:p-12 text-white">
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Coverage & Expertise</h3>
+                <div class="grid grid-cols-2 gap-8">
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">50+</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Sign Languages</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">100%</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">RID Certified</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">24/7</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Emergency Access</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">ADA</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Compliant</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[80px] md:py-[100px] px-6 bg-white">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-20 h-20 rounded-2xl bg-[#8B5CF6]/10 flex items-center justify-center flex-shrink-0">
+              <Heart className="w-10 h-10 text-[#8B5CF6]" />
+            </div>
+            <div>
+              <h3 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3">Our Commitment to the Deaf Community</h3>
+              <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">
+                We employ Deaf interpreters and consultants who ensure our services truly meet the needs of the community. We believe accessibility isn't just compliance—it's respect. Our interpreters understand Deaf culture and provide not just language access, but full communication access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Get Started?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Request a custom quote for your organization. Whether you need on-demand VRI or scheduled on-site interpreters, we'll create a solution that works.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#8B5CF6] text-white font-semibold rounded-full hover:bg-[#7C3AED] transition-colors duration-300 text-[16px]"
+          >
+            Request a Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            No commitment required. ADA compliance consultation included.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

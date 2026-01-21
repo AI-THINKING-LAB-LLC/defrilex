@@ -1,0 +1,227 @@
+---
+import { ArrowRight, CheckCircle, Clock, Globe, Headphones, HeartPulse, Phone, Scale, Shield } from "lucide-react";
+import Footer from "../../../components/Footer.astro";
+import Navigation from "../../../components/navigation";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Clock,
+    title: "24/7 On-Demand Access",
+    description: "Connect with qualified interpreters in under 30 seconds, any time of day or night, 365 days a year."
+  },
+  {
+    icon: Globe,
+    title: "300+ Languages Supported",
+    description: "From Spanish and Mandarin to rare dialects, we cover virtually every language your business encounters."
+  },
+  {
+    icon: Shield,
+    title: "HIPAA & PCI-DSS Compliant",
+    description: "Our interpreters are trained and certified for sensitive conversations in regulated industries."
+  },
+  {
+    icon: Phone,
+    title: "Simple Integration",
+    description: "Works with your existing phone systems. No special equipment or software required to get started."
+  }
+];
+
+const useCases = [
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    description: "Patient intake, discharge instructions, informed consent discussions, telehealth appointments, and emergency communications.",
+    color: "#10B981"
+  },
+  {
+    icon: Scale,
+    title: "Legal",
+    description: "Client consultations, court proceedings, depositions, immigration interviews, and compliance documentation.",
+    color: "#3B82F6"
+  },
+  {
+    icon: Headphones,
+    title: "Customer Service",
+    description: "Support calls, complaint resolution, account inquiries, technical assistance, and sales conversations.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "Certified interpreters with industry-specific expertise",
+  "Average connection time under 30 seconds",
+  "No minimum call duration or hidden fees",
+  "Dedicated account management",
+  "Real-time usage reporting and analytics",
+  "Seamless escalation to video when needed"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation client:load/>
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#F0F0FF] via-[#E8E8FF] to-[#F5F0FF]" />
+        <div class="absolute top-20 left-10 w-72 h-72 bg-[#ef9c31]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#D1D1FF]/40 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#ef9c31]/10 px-5 py-2.5 mb-8">
+            <Phone className="w-4 h-4 text-[#ef9c31]" />
+            <span class="text-[13px] font-bold text-[#ef9c31] uppercase tracking-wider">Remote Interpretation</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Over-the-Phone
+            <span class="block text-[#ef9c31]">Interpretation</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Instant access to professional interpreters in 300+ languages. Connect your team and customers across language barriers in seconds, not minutes.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#ef9c31] transition-colors duration-300 text-center text-[15px]"
+            >
+              Request a Quote
+            </a>
+            <a
+              href="#features"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#ef9c31] hover:text-[#ef9c31] transition-all duration-300 text-center text-[15px]"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              What Makes Our OPI <span class="text-[#ef9c31]">Different</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Built on a decade of experience serving healthcare, legal, and government clients with demanding requirements.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div
+                class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#D1D1FF]/30"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#ef9c31]/10 flex items-center justify-center mb-6 group-hover:bg-[#ef9c31] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#ef9c31] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#E8F5E9] via-[#F1F8E9] to-[#E0F2F1]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Ideal Use Cases
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Over-the-phone interpretation excels in scenarios where speed and accessibility matter most.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${useCase.color}15` }}
+                >
+                  <useCase.icon className="w-7 h-7" style={{ color: useCase.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{useCase.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                Why Choose <span class="text-[#ef9c31]">Defrilex</span> for OPI
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.7] mb-8">
+                We've been delivering phone interpretation services since 2015. Our approach combines human expertise with smart technology to give you reliable, fast, and accurate interpretation every time.
+              </p>
+              <div class="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div class="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                    <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#ef9c31] to-[#e88c21] rounded-3xl p-10 md:p-12 text-white">
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Industry-Leading Stats</h3>
+                <div class="grid grid-cols-2 gap-8">
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">&lt;30s</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Avg. Connect Time</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">300+</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Languages</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">99.9%</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Uptime SLA</p>
+                  </div>
+                  <div>
+                    <p class="text-[40px] md:text-[48px] font-bold mb-1">24/7</p>
+                    <p class="text-[14px] text-white/80 uppercase tracking-wider">Availability</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Get Started?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Request a custom quote for your organization. Our team will assess your needs and provide a tailored solution within 24 hours.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#ef9c31] text-white font-semibold rounded-full hover:bg-[#e88c21] transition-colors duration-300 text-[16px]"
+          >
+            Request a Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            No commitment required. Free consultation included.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

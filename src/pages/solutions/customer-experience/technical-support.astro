@@ -1,0 +1,250 @@
+---
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { Wrench, Clock, Shield, BookOpen, Laptop, Server, Smartphone, CheckCircle, ArrowRight, Lightbulb } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Clock,
+    title: "Rapid Resolution Times",
+    description: "Our tiered support model ensures issues are resolved quickly—80% of tickets closed on first contact, complex issues escalated seamlessly."
+  },
+  {
+    icon: Shield,
+    title: "Certified Technicians",
+    description: "CompTIA, Cisco, Microsoft, and AWS certified professionals who understand enterprise systems inside and out."
+  },
+  {
+    icon: BookOpen,
+    title: "Knowledge Base Integration",
+    description: "Self-service portals and AI-assisted troubleshooting reduce ticket volume while improving customer satisfaction."
+  },
+  {
+    icon: Wrench,
+    title: "Remote & On-Site Support",
+    description: "From remote desktop assistance to dispatched field technicians, we cover the full spectrum of technical support needs."
+  }
+];
+
+const industries = [
+  {
+    icon: Laptop,
+    title: "SaaS & Software",
+    description: "Application troubleshooting, integration support, API assistance, and feature guidance for software products.",
+    color: "#3B82F6"
+  },
+  {
+    icon: Server,
+    title: "IT Infrastructure",
+    description: "Network issues, server management, cloud configurations, and security incident response.",
+    color: "#10B981"
+  },
+  {
+    icon: Smartphone,
+    title: "Consumer Electronics",
+    description: "Device setup, connectivity issues, firmware updates, and warranty support for hardware products.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "80%+ first-contact resolution rate",
+  "Average response time under 2 minutes",
+  "24/7/365 coverage across all time zones",
+  "Seamless CRM and ticketing integration",
+  "Detailed analytics and SLA reporting",
+  "Continuous training on your product updates"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#EFF6FF] via-[#DBEAFE] to-[#E0F2FE]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#60A5FA]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#3B82F6]/10 px-5 py-2.5 mb-8">
+            <Wrench className="w-4 h-4 text-[#3B82F6]" />
+            <span class="text-[13px] font-bold text-[#3B82F6] uppercase tracking-wider">Customer Experience</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Technical Support
+            <span class="block text-[#3B82F6]">That Actually Solves</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Expert technical assistance to resolve issues quickly and keep your operations running smoothly. From Tier 1 to Tier 3, we've got you covered.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#3B82F6] transition-colors duration-300 text-center text-[15px]"
+            >
+              Get Technical Support
+            </a>
+            <a
+              href="#solution"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#3B82F6] hover:text-[#3B82F6] transition-all duration-300 text-center text-[15px]"
+            >
+              Our Approach
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                The <span class="text-[#3B82F6]">Solution</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Technical issues don't wait for business hours, and neither do we. Our technical support teams combine deep product knowledge with genuine problem-solving skills to resolve issues fast—and prevent them from recurring.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                We implement a tiered support structure that matches the right expertise to each issue. Simple questions get quick answers; complex problems get the attention of senior engineers. The result: faster resolutions and happier customers.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                Beyond break-fix support, we proactively identify patterns, document solutions, and contribute to knowledge bases that reduce future ticket volume while empowering your customers to self-serve.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8] rounded-3xl p-10 md:p-12 text-white">
+                <Lightbulb className="w-12 h-12 mb-6" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Tiered Support Model</h3>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start gap-3">
+                    <span class="bg-white/20 rounded-full px-3 py-1 text-[13px] font-bold">L1</span>
+                    <p class="text-white/90 text-[15px]">First-line triage, password resets, basic troubleshooting</p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="bg-white/20 rounded-full px-3 py-1 text-[13px] font-bold">L2</span>
+                    <p class="text-white/90 text-[15px]">Advanced diagnostics, configuration issues, integrations</p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="bg-white/20 rounded-full px-3 py-1 text-[13px] font-bold">L3</span>
+                    <p class="text-white/90 text-[15px]">Engineering escalations, bug identification, custom solutions</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">80%+</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">First Contact Resolution</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">&lt;2min</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Avg Response</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Key <span class="text-[#3B82F6]">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Enterprise-grade technical support without the enterprise overhead.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-[#F0F7FF] rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300 border border-[#3B82F6]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#3B82F6]/10 flex items-center justify-center mb-6 group-hover:bg-[#3B82F6] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#3B82F6] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#EFF6FF] via-[#DBEAFE] to-[#E0F2FE]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Industry Applications
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Technical expertise tailored to your product and industry.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Why Partner With <span class="text-[#3B82F6]">Defrilex</span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div class="flex items-start gap-3 bg-white rounded-2xl p-5 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Outsource Your Technical Support
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Your customers deserve technical support that resolves issues, not reads scripts. Let our certified technicians handle the complexity while you focus on building great products.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#3B82F6] text-white font-semibold rounded-full hover:bg-[#1D4ED8] transition-colors duration-300 text-[16px]"
+          >
+            Request a Technical Support Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free technical assessment • No commitment required • SLA guarantees
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

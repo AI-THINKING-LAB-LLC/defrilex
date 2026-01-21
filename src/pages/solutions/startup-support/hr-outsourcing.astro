@@ -1,0 +1,240 @@
+---
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { Users, Shield, FileCheck, Clock, Rocket, Building2, Laptop, CheckCircle, ArrowRight, AlertTriangle } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const includedServices = [
+  "Compliance audits and regulatory updates",
+  "Employee onboarding and offboarding",
+  "Benefits administration and enrollment",
+  "Performance management systems",
+  "Employee handbook and policy development",
+  "Background checks and verification",
+  "Leave management and tracking",
+  "HR documentation and record-keeping"
+];
+
+const features = [
+  {
+    icon: Shield,
+    title: "Compliance First",
+    description: "Stay ahead of employment laws, tax regulations, and industry requirements without hiring a dedicated compliance team."
+  },
+  {
+    icon: FileCheck,
+    title: "Streamlined Onboarding",
+    description: "Structured onboarding processes that get new hires productive faster while ensuring all paperwork is handled correctly."
+  },
+  {
+    icon: Users,
+    title: "Benefits Management",
+    description: "Negotiate better benefits packages and handle enrollment, changes, and questions—giving your team big-company perks."
+  },
+  {
+    icon: Clock,
+    title: "Time Back to Build",
+    description: "Stop spending founder hours on HR administration. Focus on product, customers, and growth instead."
+  }
+];
+
+const industries = [
+  {
+    icon: Rocket,
+    title: "Seed & Series A Startups",
+    description: "Build proper HR foundations from day one without the overhead of a full HR department.",
+    color: "#10B981"
+  },
+  {
+    icon: Laptop,
+    title: "Remote-First Companies",
+    description: "Navigate the complexities of multi-state or international employment with confidence.",
+    color: "#3B82F6"
+  },
+  {
+    icon: Building2,
+    title: "Scaling Companies",
+    description: "Maintain HR quality and compliance as you grow from 10 to 100+ employees.",
+    color: "#8B5CF6"
+  }
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation client:load/>
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#ECFDF5] via-[#D1FAE5] to-[#A7F3D0]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#10B981]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#34D399]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#10B981]/10 px-5 py-2.5 mb-8">
+            <Users className="w-4 h-4 text-[#10B981]" />
+            <span class="text-[13px] font-bold text-[#10B981] uppercase tracking-wider">Startup Support</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            HR That Scales
+            <span class="block text-[#10B981]">With Your Startup</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Comprehensive HR solutions that keep you compliant and your workforce efficient—without the cost of a full HR department.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#consultation"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#10B981] transition-colors duration-300 text-center text-[15px]"
+            >
+              Schedule a Consultation
+            </a>
+            <a
+              href="#challenge"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#10B981] hover:text-[#10B981] transition-all duration-300 text-center text-[15px]"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="challenge" class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="flex flex-col md:flex-row items-start gap-10">
+            <div class="w-20 h-20 rounded-2xl bg-[#FEF3C7] flex items-center justify-center flex-shrink-0">
+              <AlertTriangle className="w-10 h-10 text-[#F59E0B]" />
+            </div>
+            <div>
+              <h2 class="text-[28px] md:text-[36px] font-bold text-[#1A1A1A] mb-6">The Challenge</h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-4">
+                You started a company to build something great—not to become an HR expert. But as you grow, the people complexity explodes: employment laws, benefits administration, compliance requirements, onboarding processes, performance reviews.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                Miss a compliance deadline? You're exposed to lawsuits. Botch an onboarding? New hires never reach their potential. Handle benefits poorly? Top talent walks. These aren't problems you can ignore—but they're not where your competitive advantage lies either.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              The <span class="text-[#10B981]">Solution</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[650px] mx-auto leading-[1.7]">
+              We become your outsourced HR department—handling everything from compliance to culture, so you can focus on building your business.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#10B981]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#10B981]/10 flex items-center justify-center mb-6 group-hover:bg-[#10B981] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#10B981] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#ECFDF5] via-[#D1FAE5] to-[#A7F3D0]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                What's <span class="text-[#10B981]">Included</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.7] mb-8">
+                A complete HR infrastructure delivered by experienced professionals who understand the unique needs of growing companies.
+              </p>
+              <div class="grid grid-cols-1 gap-3">
+                {includedServices.map((service, index) => (
+                  <div class="flex items-start gap-3 bg-white/60 backdrop-blur-sm rounded-xl p-4">
+                    <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                    <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#10B981] to-[#059669] rounded-3xl p-10 md:p-12 text-white">
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-6">Built for Startups</h3>
+                <p class="text-white/90 leading-[1.7] mb-8">
+                  We've helped hundreds of startups navigate the HR maze—from first hire to Series C and beyond. Our playbooks are battle-tested and startup-optimized.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">500+</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Startups Served</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">99%</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Compliance Rate</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Perfect For
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div 
+                class="bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="consultation" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Offload HR?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Schedule a free consultation to discuss your HR needs. We'll assess your current setup, identify gaps, and show you exactly how we can help your startup scale smoothly.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#10B981] text-white font-semibold rounded-full hover:bg-[#059669] transition-colors duration-300 text-[16px]"
+          >
+            Schedule Your Free Consultation
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            30-minute call • No commitment • Actionable insights guaranteed
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>

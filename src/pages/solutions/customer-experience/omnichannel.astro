@@ -1,0 +1,240 @@
+---
+
+import Navigation from "../../../components/navigation";
+import Footer from "../../../components/Footer.astro";
+import { Layers, RefreshCw, BarChart3, UserCheck, ShoppingCart, Building2, HeartPulse, CheckCircle, ArrowRight, Link } from "lucide-react";
+import Layout from "../../../layouts/Layout.astro";
+
+const features = [
+  {
+    icon: Layers,
+    title: "Unified Customer View",
+    description: "Every interaction—phone, email, chat, social—visible in one place. Agents see the complete customer journey instantly."
+  },
+  {
+    icon: RefreshCw,
+    title: "Seamless Channel Switching",
+    description: "Customers start on chat, continue via email, and finish on phone—without repeating themselves or losing context."
+  },
+  {
+    icon: BarChart3,
+    title: "Cross-Channel Analytics",
+    description: "Understand how customers move between channels, identify friction points, and optimize the entire experience."
+  },
+  {
+    icon: UserCheck,
+    title: "Consistent Brand Voice",
+    description: "Same quality, same tone, same resolution standards across every touchpoint. Your brand stays consistent everywhere."
+  }
+];
+
+const industries = [
+  {
+    icon: ShoppingCart,
+    title: "Retail & E-Commerce",
+    description: "Unified shopping experience from browse to buy to return, across web, mobile, store, and support channels.",
+    color: "#10B981"
+  },
+  {
+    icon: Building2,
+    title: "Financial Services",
+    description: "Secure, compliant support across branch, online banking, mobile app, and phone channels.",
+    color: "#3B82F6"
+  },
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    description: "Coordinated patient communication across portal, phone, SMS, and in-person touchpoints.",
+    color: "#8B5CF6"
+  }
+];
+
+const benefits = [
+  "Single view of customer across all channels",
+  "40% reduction in repeat contacts",
+  "Consistent experience scores across touchpoints",
+  "Real-time channel performance dashboards",
+  "Intelligent routing based on customer history",
+  "Integration with your existing tech stack"
+];
+---
+<Layout>
+    <main class="min-h-screen bg-[#F0F0FF]">
+      <Navigation />
+      
+      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#FEF3C7] via-[#FDE68A] to-[#FEF9C3]" />
+        <div class="absolute top-20 left-20 w-80 h-80 bg-[#F59E0B]/10 rounded-full blur-3xl" />
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#FBBF24]/15 rounded-full blur-3xl" />
+        
+        <div class="container relative z-10 px-6 max-w-[1000px]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#F59E0B]/10 px-5 py-2.5 mb-8">
+            <Layers className="w-4 h-4 text-[#F59E0B]" />
+            <span class="text-[13px] font-bold text-[#F59E0B] uppercase tracking-wider">Customer Experience</span>
+          </div>
+          
+          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
+            Omnichannel
+            <span class="block text-[#F59E0B]">Done Right</span>
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
+            Unified customer experience across all communication channels. Phone, email, chat, social—connected seamlessly for effortless interactions.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#quote"
+              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#F59E0B] transition-colors duration-300 text-center text-[15px]"
+            >
+              Unify Your Channels
+            </a>
+            <a
+              href="#solution"
+              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#F59E0B] hover:text-[#F59E0B] transition-all duration-300 text-center text-[15px]"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div class="w-full lg:w-1/2">
+              <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+                The <span class="text-[#F59E0B]">Solution</span>
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                Your customers don't think in channels—they just want help. But too often, switching from chat to phone means starting over. Moving from social to email means repeating the whole story. That friction costs you customers.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8] mb-6">
+                True omnichannel isn't just being present everywhere—it's being connected everywhere. Our platform integrates all your support channels into a single, unified experience where context flows seamlessly and customers never have to repeat themselves.
+              </p>
+              <p class="text-[16px] md:text-[18px] text-[#4A4A4A] leading-[1.8]">
+                Agents see the complete customer journey—every previous interaction, purchase, and preference—regardless of which channel the customer used. The result: faster resolutions, happier customers, and a brand that feels cohesive.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <div class="bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-3xl p-10 md:p-12 text-white">
+                <Link className="w-12 h-12 mb-6" />
+                <h3 class="text-[24px] md:text-[28px] font-bold mb-4">Connected Experiences</h3>
+                <p class="text-white/90 leading-[1.7] mb-6">
+                  True omnichannel means your customers feel like they're talking to one company, not disconnected departments. Every interaction builds on the last.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">40%</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Fewer Repeat Contacts</p>
+                  </div>
+                  <div>
+                    <p class="text-[32px] md:text-[40px] font-bold">360°</p>
+                    <p class="text-[13px] text-white/70 uppercase tracking-wider">Customer View</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Key <span class="text-[#F59E0B]">Features</span>
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Everything needed to deliver truly unified customer experiences.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div
+                class="group bg-[#FFFBEB] rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300 border border-[#F59E0B]/10"
+              >
+                <div class="w-14 h-14 rounded-2xl bg-[#F59E0B]/10 flex items-center justify-center mb-6 group-hover:bg-[#F59E0B] transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-[#F59E0B] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#FEF3C7] via-[#FDE68A] to-[#FEF9C3]">
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Industry Applications
+            </h2>
+            <p class="text-[16px] md:text-[18px] text-[#4A4A4A] max-w-[600px] mx-auto leading-[1.7]">
+              Omnichannel strategies customized for your industry's unique customer journey.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <div 
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: `${industry.color}15` }}
+                >
+                  <industry.icon className="w-7 h-7" style={{ color: industry.color }} />
+                </div>
+                <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] mb-4">{industry.title}</h3>
+                <p class="text-[15px] md:text-[16px] text-[#4A4A4A] leading-[1.7]">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[100px] md:py-[140px] px-6">
+        <div class="max-w-[1000px] mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+              Why Partner With <span class="text-[#F59E0B]">Defrilex</span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div class="flex items-start gap-3 bg-white rounded-2xl p-5 shadow-sm">
+                <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                <span class="text-[15px] md:text-[16px] text-[#1A1A1A] font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="py-[100px] md:py-[140px] px-6 bg-[#1A1A1A]">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+            Ready to Connect Your Channels?
+          </h2>
+          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[550px] mx-auto leading-[1.7] mb-10">
+            Stop making customers repeat themselves. Let us help you build a truly unified customer experience that flows seamlessly across every touchpoint.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-10 py-5 bg-[#F59E0B] text-white font-semibold rounded-full hover:bg-[#D97706] transition-colors duration-300 text-[16px]"
+          >
+            Get Your Omnichannel Quote
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p class="mt-6 text-[14px] text-white/50">
+            Free channel audit • No commitment required • Integration support included
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+</Layout>
