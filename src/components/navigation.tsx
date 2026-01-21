@@ -1,4 +1,4 @@
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const tabs = [
@@ -178,7 +178,7 @@ const SolutionsMegaMenu = ({ onClose }: { onClose: () => void }) => {
               href={item.href}
               className="group p-5 rounded-2xl hover:bg-[#F0F0FF] border border-transparent hover:border-[#D1D1FF] transition-all"
             >
-              <div className="w-11 h-11 mb-4 rounded-xl bg-[#F0F0FF] flex items-center justify-center overflow-hidden">
+              <div className="w-11 h-11 mb-4 rounded-xl bg-[#00003d] flex items-center justify-center overflow-hidden">
                 <img
                   src={item.icon}
                   alt={item.title}
@@ -254,7 +254,7 @@ const CompanyMegaMenu = ({ onClose }: { onClose: () => void }) => {
             href={item.href || "#"}
             className="group p-5 rounded-2xl hover:bg-[#F0F0FF] border border-transparent hover:border-[#D1D1FF] transition-all"
           >
-            <div className="w-11 h-11 mb-4 rounded-xl bg-[#F0F0FF] flex items-center justify-center overflow-hidden">
+            <div className="w-11 h-11 mb-4 rounded-xl bg-[#00003d] flex items-center justify-center overflow-hidden">
               <img
                 src={item.icon}
                 alt={item.title}
@@ -329,7 +329,7 @@ export default function Navigation() {
                   >
                     Solutions
                     {activeMenu === "solutions" ? (
-                      <X size={13} className="opacity-70" />
+                      <ChevronUp size={13} className="opacity-70" />
                     ) : (
                       <ChevronDown size={13} className="opacity-70" />
                     )}
@@ -344,7 +344,7 @@ export default function Navigation() {
                   >
                     Company
                     {activeMenu === "company" ? (
-                      <X size={13} className="opacity-70" />
+                      <ChevronUp size={13} className="opacity-70" />
                     ) : (
                       <ChevronDown size={13} className="opacity-70" />
                     )}
@@ -380,14 +380,7 @@ export default function Navigation() {
             </nav>
 
             <div className="shrink-0 relative flex items-center gap-3">
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 text-white"
-                aria-label="Toggle mobile menu"
-              >
-                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-              </button>
+            
 
               <button
                 onClick={() =>
@@ -402,6 +395,15 @@ export default function Navigation() {
                   className={`relative z-10 w-4 h-4 text-white transition-transform duration-300 ${activeMenu === "signin" ? "rotate-180" : ""}`}
                 />
                 <div className="absolute inset-0 bg-[#00003d] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              </button>
+
+                {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 text-white"
+                aria-label="Toggle mobile menu"
+              >
+                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
 
               {activeMenu === "signin" && (

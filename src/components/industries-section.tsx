@@ -45,7 +45,7 @@ const industries: IndustryCard[] = [
   },
   {
     title: "Education",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=95",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=95",
     label: "Education",
   },
   {
@@ -112,7 +112,7 @@ const IndustriesSection = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110 h-full w-full"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#00003d]/90 via-[#00003d]/30 to-transparent" />
                 
