@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowUpRight, Phone, MessageCircle, Video, Headphones, Globe, FileText, Users, Building2, ChevronUp, Mic, BookOpen, Languages, Briefcase, Award, Clock } from "lucide-react";
+import { ArrowUpRight, Phone, MessageCircle, Video, Headphones, Globe, FileText, Users, Building2, ChevronUp, Mic, BookOpen, Languages, Briefcase, Award, Clock, Brain } from "lucide-react";
 
 interface Solution {
   title: string;
@@ -17,49 +17,49 @@ const solutions: Solution[] = [
     description: "Connect to a professional interpreter within seconds, reducing wait times and facilitating prompt communication across 200+ languages.",
     icon: <Phone className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=90",
-    link: "/solutions/opi",
+    link: "/solutions/remote-interpretation/opi",
   },
   {
     title: "Video Remote Interpretation",
     description: "Face-to-face interpretation services via secure video connection, perfect for medical, legal, and business meetings requiring visual context.",
     icon: <Video className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=90",
-    link: "/solutions/vri",
+    link: "/solutions/remote-interpretation/vri",
   },
   {
     title: "Multilingual Chat Support",
     description: "Real-time chat assistance in various languages, allowing businesses to connect with customers from different regions without language barriers.",
     icon: <MessageCircle className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=90",
-    link: "/solutions/chat-support",
+    link: "/solutions/customer-experience/chat-support",
   },
   {
     title: "Multilingual Customer Experience",
     description: "End-to-end CX solutions with native-speaking agents who understand cultural nuances and deliver exceptional customer service globally.",
     icon: <Headphones className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=90",
-    link: "/solutions/cx",
+    link: "/solutions/customer-experience/customer-service",
   },
   {
-    title: "Translation Services",
-    description: "Professional document translation with certified linguists ensuring accuracy and cultural relevance for all your business materials.",
+    title: "Omnichannel Support",
+    description: "Unified customer experience across all communication channels for seamless interactions.",
     icon: <FileText className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&q=90",
-    link: "/solutions/translation",
+    link: "/solutions/customer-experience/omnichannel",
   },
   {
-    title: "Localization",
-    description: "Adapt your content, software, and products for specific markets while maintaining brand consistency and cultural appropriateness.",
+    title: "Social Media Support",
+    description: "Engaging with customers on social platforms to build relationships and resolve concerns.",
     icon: <Globe className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=90",
-    link: "/solutions/localization",
+    link: "/solutions/customer-experience/social-media-support",
   },
   {
-    title: "Staffing Solutions",
-    description: "Access qualified multilingual professionals for temporary or permanent positions across various industries and specializations.",
+    title: "AI Voice Agents for Support",
+    description: "Automated voice solutions for handling routine calls and inquiries.",
     icon: <Users className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=90",
-    link: "/solutions/staffing",
+    link: "/solutions/ai-automation/ai-voice-agents",
   },
   {
     title: "Enterprise Solutions",
@@ -76,39 +76,39 @@ const solutions: Solution[] = [
     link: "/solutions/onsite",
   },
   {
-    title: "Language Training",
-    description: "Customized language courses and cultural training programs to upskill your workforce for global business communication.",
-    icon: <BookOpen className="w-6 h-6" />,
+    title: "AI Language Training",
+    description: "AI-powered language courses and cultural training programs to upskill your workforce for global business communication.",
+    icon: <Brain className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=90",
-    link: "/solutions/training",
+    link: "/solutions/ai-automation/data-training",
   },
   {
-    title: "Transcription Services",
-    description: "Accurate transcription of audio and video content in multiple languages with quick turnaround times.",
+    title: "Sign Language Interpretation",
+    description: "Professional sign language services bridging communication gaps for the hearing-impaired.",
     icon: <Languages className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=90",
-    link: "/solutions/transcription",
+    link: "/solutions/remote-interpretation/sign-language",
   },
   {
-    title: "Legal Interpretation",
-    description: "Certified court interpreters and legal document translation services for depositions, trials, and legal proceedings.",
+    title: "AI Translation",
+    description: "Advanced machine translation enhanced by human expertise for accurate results.",
     icon: <Briefcase className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=90",
-    link: "/solutions/legal",
+    link: "/solutions/ai-automation/ai-translation",
   },
   {
-    title: "Medical Interpretation",
-    description: "HIPAA-compliant healthcare interpretation ensuring accurate communication between patients and medical professionals.",
+    title: "Sales Generation",
+    description: "Data-driven prospecting and segmentation ensures your message reaches the right decision-makers at the right time.",
     icon: <Award className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=90",
-    link: "/solutions/medical",
+    link: "/solutions/customer-experience/sales-generation",
   },
   {
-    title: "24/7 Language Support",
-    description: "Round-the-clock access to professional interpreters and translators whenever your business needs language assistance.",
+    title: "Technical Support",
+    description: "Expert technical assistance to resolve issues quickly and keep your operations running smoothly.",
     icon: <Clock className="w-6 h-6" />,
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=90",
-    link: "/solutions/247-support",
+    link: "/solutions/customer-experience/technical-support",
   },
 ];
 
@@ -172,7 +172,7 @@ const SolutionsSection = () => {
                     {solution.description}
                   </p>
 
-                  <button className="inline-flex items-center gap-2 text-[12px] md:text-[13px] font-semibold text-[#ef9c31] hover:text-white transition-colors duration-300 group/btn">
+                  <a href={solution.link} className="inline-flex items-center gap-2 text-[12px] md:text-[13px] font-semibold text-[#ef9c31] hover:text-white transition-colors duration-300 group/btn">
                     Learn More
                     <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#ef9c31]/10 flex items-center justify-center group-hover/btn:bg-[#ef9c31]/20 transition-colors">
                       <ArrowUpRight 
@@ -180,7 +180,7 @@ const SolutionsSection = () => {
                         className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" 
                       />
                     </span>
-                  </button>
+                  </a>
                 </div>
 
               <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ef9c31] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
