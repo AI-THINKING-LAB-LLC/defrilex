@@ -301,7 +301,7 @@ export default function Navigation() {
         <div className="container mx-auto max-w-7xl flex justify-center">
           <div
             ref={navRef}
-            className={`relative flex items-center justify-between w-full max-w-240 h-17.5 md:h-18.75 bg-[#00003d] rounded-[15px] pl-6 md:pl-10 pr-4 md:pr-5 transition-all duration-300 ${
+            className={`relative flex items-center justify-between w-full max-w-300 h-17.5 md:h-16.75 bg-white rounded-[15px] pl-6 md:pl-10 pr-4 md:pr-5 transition-all duration-300 ${
               isScrolled ? "scale-[0.97] shadow-2xl" : "scale-100"
             }`}
           >
@@ -323,8 +323,8 @@ export default function Navigation() {
                 <li>
                   <button
                     onClick={() => toggleMenu("solutions")}
-                    className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold text-white/90 hover:text-white transition-colors uppercase tracking-wider ${
-                      activeMenu === "solutions" ? "text-white" : ""
+                    className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold text-[#00003d] transition-colors uppercase tracking-wider ${
+                      activeMenu === "solutions" ? "" : ""
                     }`}
                   >
                     Solutions
@@ -338,8 +338,8 @@ export default function Navigation() {
                 <li>
                   <button
                     onClick={() => toggleMenu("company")}
-                    className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold text-white/90 hover:text-white transition-colors uppercase tracking-wider ${
-                      activeMenu === "company" ? "text-white" : ""
+                    className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold text-[#00003d] transition-colors uppercase tracking-wider ${
+                      activeMenu === "company" ? "" : ""
                     }`}
                   >
                     Company
@@ -353,7 +353,7 @@ export default function Navigation() {
                 <li>
                   <a
                     href="#"
-                    className="px-4 py-2 text-[13px] font-semibold text-white/90 hover:text-white transition-colors uppercase tracking-wider"
+                    className="px-4 py-2 text-[13px] font-semibold text-[#00003d] transition-colors uppercase tracking-wider"
                   >
                     Careers
                   </a>
@@ -361,7 +361,7 @@ export default function Navigation() {
                 <li>
                   <a
                     href="#"
-                    className="px-4 py-2 text-[13px] font-semibold text-white/90 hover:text-white transition-colors uppercase tracking-wider"
+                    className="px-4 py-2 text-[13px] font-semibold text-[#00003d] transition-colors uppercase tracking-wider"
                   >
                     Academy
                   </a>
@@ -371,7 +371,7 @@ export default function Navigation() {
                     href="https://support.defrilex.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-[13px] font-semibold text-white/90 hover:text-white transition-colors uppercase tracking-wider"
+                    className="px-4 py-2 text-[13px] font-semibold text-[#00003d] transition-colors uppercase tracking-wider"
                   >
                     Help
                   </a>
@@ -380,13 +380,11 @@ export default function Navigation() {
             </nav>
 
             <div className="shrink-0 relative flex items-center gap-3">
-            
-
               <button
                 onClick={() =>
                   setActiveMenu(activeMenu === "signin" ? null : "signin")
                 }
-                className="relative group inline-flex items-center justify-center gap-2 px-5 md:px-8 h-10.5 md:h-11.25 bg-[#141414] rounded-full overflow-hidden transition-all duration-300"
+                className="relative group inline-flex items-center justify-center gap-2 px-5 md:px-8 h-10.5 md:h-11.25 bg-[#00003d] rounded-full overflow-hidden transition-all duration-300"
               >
                 <span className="relative z-10 text-white text-[13px] md:text-[14px] font-semibold tracking-wide">
                   Sign In
@@ -397,10 +395,10 @@ export default function Navigation() {
                 <div className="absolute inset-0 bg-[#00003d] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               </button>
 
-                {/* Mobile Menu Button */}
+              {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 text-white"
+                className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-gray-600/10 text-neutral-900"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}

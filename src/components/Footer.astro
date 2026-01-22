@@ -26,33 +26,38 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
     { name: 'Contact the company', href: '#' },
     { name: 'Help Center', href: '#' },
     { name: 'Careers', href: '#' },
-    { name: 'Kalam Pulse', href: '#' },
-    { name: 'Kalam Connect', href: '#' },
-    { name: 'Login', href: '#' }]
+  ]
 
   };
 ---
-    <footer class="bg-[#141414] text-white pt-[60px] md:pt-[80px] lg:pt-[100px] pb-[30px] md:pb-[40px] lg:pb-[60px]">
+    <footer class="text-neutral-900 pt-[60px] md:pt-[80px] lg:pt-[100px] pb-[30px] md:pb-[40px] lg:pb-[60px]">
       <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-[1280px]">
         <div class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-12 mb-12 md:mb-16">
           <div class="lg:w-1/4">
             <div class="mb-4 md:mb-6">
-              <div class="w-[45px] h-[45px] md:w-[55px] md:h-[55px] bg-[#00005a] rounded-[12px] md:rounded-[14px] flex items-center justify-center">
-                <span class="text-white text-xl md:text-2xl font-bold">D</span>
-              </div>
+              <a
+                href="/"
+                class="inline-block relative w-25 md:w-32.5 h-9 md:h-10"
+              >
+                <img
+                  src="/logo_dark.png"
+                  alt="Defrilex Logo"
+                  class="object-contain"
+                />
+              </a>
             </div>
-            <p class="text-[14px] md:text-[16px] leading-[1.5] text-white/75 max-w-[280px]">
+            <p class="text-[14px] md:text-[16px] leading-[1.5] text-neutral-900/75 max-w-[280px]">
               Your Virtual BPO Destination for a Revolutionary Customer Experience
             </p>
           </div>
 
           <div class="lg:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-6">
             <div>
-              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Solutions</h4>
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-neutral-900/50 mb-4 md:mb-5 uppercase tracking-wider">Solutions</h4>
               <ul class="space-y-2 md:space-y-3">
                 {footerLinks.solutions.map((link) =>
                 <li>
-                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-neutral-900/85 hover:text-neutral-900 transition-colors duration-200">
                       {link.name}
                     </a>
                   </li>
@@ -61,11 +66,11 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
             </div>
 
             <div>
-              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Start-ups</h4>
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-neutral-900/50 mb-4 md:mb-5 uppercase tracking-wider">Start-ups</h4>
               <ul class="space-y-2 md:space-y-3">
                 {footerLinks.startups.map((link) =>
                 <li>
-                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-neutral-900/85 hover:text-neutral-900 transition-colors duration-200">
                       {link.name}
                     </a>
                   </li>
@@ -74,11 +79,11 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
             </div>
 
             <div class="col-span-2 sm:col-span-1">
-              <h4 class="text-[13px] md:text-[14px] font-semibold text-white/50 mb-4 md:mb-5 uppercase tracking-wider">Company</h4>
+              <h4 class="text-[13px] md:text-[14px] font-semibold text-neutral-900/50 mb-4 md:mb-5 uppercase tracking-wider">Company</h4>
               <ul class="space-y-2 md:space-y-3">
                 {footerLinks.company.map((link) =>
                 <li>
-                    <a href={link.href} class="text-[13px] md:text-[14px] text-white/85 hover:text-white transition-colors duration-200">
+                    <a href={link.href} class="text-[13px] md:text-[14px] text-neutral-900/85 hover:text-neutral-900 transition-colors duration-200">
                       {link.name}
                     </a>
                   </li>
@@ -100,7 +105,7 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
               </div>
             </div>
 
-            <div class="text-[12px] md:text-[13px] text-white/50 order-3 md:order-2">© 2026 Defrilex. All rights reserved
+            <div class="text-[12px] md:text-[13px] text-neutral-900/50 order-3 md:order-2">© 2026 Defrilex. All rights reserved
 
             </div>
 
