@@ -11,6 +11,9 @@ import BusinessDifferently from '../components/business-differently';
 import ReadyToStart from '../components/ready-to-start.astro';
 import Footer from '../components/Footer.astro';
 import CalltoAction from '../components/call-to-action.astro';
+import Test1 from '../components/test-1.astro'
+import Test3 from '../components/test-3.astro'
+import Test2 from '../components/test--2.astro'
 ---
 
 <Layout>
@@ -19,7 +22,12 @@ import CalltoAction from '../components/call-to-action.astro';
 	  <Hero/>
 	  <GatewayFeatures/>
 	  <SolutionsSection client:load/>
-	  <CertificationSection />
+	  <!-- <CertificationSection /> -->
+	  <div class="bg-white">
+		<Test1/>
+	  <Test2/>
+	  <Test3/>
+	  </div>
 	  <!-- <Languages/> -->
 	   <ReadyToStart/>
 	  <IndustriesSection client:load/>

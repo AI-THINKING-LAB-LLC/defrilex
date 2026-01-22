@@ -4,6 +4,7 @@ import { ArrowRight, Award, Bot, Briefcase, Building2, Check, Clock, DollarSign,
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/navigation";
 import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/page-header.astro";
 
 const whatMakesUsDifferent = [
 {
@@ -101,8 +102,21 @@ const dontChooseDefrilex = [
 "Bleeding-edge AI experiments with unproven results"];
 ---
 <Layout>
-        <main class="min-h-screen bg-[#F8FAFC]">
+      <main class="min-h-screen bg-[#F8FAFC]">
       <Navigation client:load/>
+
+      <PageHeader 
+      heading="Why Choose Us" 
+      title="Language Barriers Shouldn't Cost You Business"
+      image="https://images.unsplash.com/photo-1539992190939-08f22d7ebaad?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description=" You're here because you need reliable multilingual communication—and you've probably been burned by providers who overpromised and underdelivered. We get it. That's why we built Defrilex differently."
+      buttons={[
+        {
+          link: '/company/contact',
+          name: "Let's Talk"
+        }
+      ]}
+      />
       
       <section class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#00003d] via-[#1E3A5F] to-[#3B82F6]" />
@@ -287,12 +301,12 @@ const dontChooseDefrilex = [
         </div>
       </section>
 
-      <section class="py-[100px] md:py-[140px] px-6 bg-gradient-to-br from-[#1E3A5F] via-[#2D5A87] to-[#3B82F6]">
+      <section class="py-[100px] md:py-[140px] px-6 bg-[#f0f0f0]">
         <div class="max-w-[900px] mx-auto text-center">
-          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+          <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold leading-[1.1] mb-6">
             Ready to Work With a BPO That Actually Delivers?
           </h2>
-          <p class="text-[16px] md:text-[18px] text-white/70 max-w-[650px] mx-auto leading-[1.7] mb-10">
+          <p class="text-[16px] md:text-[18px] text-neutral-950/70 max-w-[650px] mx-auto leading-[1.7] mb-10">
             If you need multilingual communication services where mistakes aren't an option, let's talk. No high-pressure sales tactics. No runaround. Just an honest conversation about whether Defrilex is the right fit for your needs.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -305,13 +319,13 @@ const dontChooseDefrilex = [
             </a>
             <a
               href="/solutions/remote-interpretation/opi"
-              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-neutral-950 font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
 
               See Our Services
             </a>
             <a
               href="/company/our-team"
-              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
+              class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-neutral-950 font-semibold rounded-full hover:bg-white hover:text-[#1E3A5F] transition-colors duration-300 text-[16px]">
 
               Meet Our Team
             </a>

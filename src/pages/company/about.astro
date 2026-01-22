@@ -3,6 +3,7 @@ import { ArrowRight, Bot, Building2, Clock, DollarSign, Globe, Handshake, Headph
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/navigation";
 import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/page-header.astro";
 
 const whyWorkWithUs = [
 {
@@ -49,15 +50,16 @@ const timeline = [
   description: "Achieved GDPR, HIPAA, and PCI-DSS compliance. Reached seven-figure revenue. Built out 24/7 operations. Survived COVID by being adaptable and focused on client needs."
 },
 {
+  year: "2025",
+  title: "What's Next",
+  description: "Integrating smart AI tools with human professionals. Expanding into new markets while staying true to what made us successful: reliability, quality, and treating clients like partners."
+},
+{
   year: "2026",
   title: "Innovation and Scale",
   description: "Founder launches AI Thinking Lab to explore how AI can enhance (not replace) human expertise in language services. Continue expanding network while maintaining quality standards. Begin ISO 20000 and SOC 2 certification processes."
 },
-{
-  year: "2025",
-  title: "What's Next",
-  description: "Integrating smart AI tools with human professionals. Expanding into new markets while staying true to what made us successful: reliability, quality, and treating clients like partners."
-}];
+];
 
 
 const values = [
@@ -132,36 +134,19 @@ const stats = [
     <main class="min-h-screen bg-[#F8FAFC]">
       <Navigation client:load/>
       
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-linear-to-br from-[#1E3A5F] via-[#2D5A87] to-[#3B82F6]" />
-        <div class="absolute top-20 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#06B6D4]/20 rounded-full blur-3xl" />
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-        
-        <div class="container relative z-10 px-6 max-w-250">
-          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 mb-8 border border-white/20">
-            <Globe className="w-4 h-4 text-white" />
-            <span class="text-[13px] font-bold text-white uppercase tracking-wider">About Defrilex</span>
-          </div>
-          
-          <h1 class="text-[36px] sm:text-[46px] md:text-[54px] lg:text-[62px] font-bold text-white leading-[1.1] tracking-[-0.02em] mb-8">
-            Breaking Language Barriers,
-            <span class="block text-[#67E8F9]">Building Real Connections</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-white/80 max-w-[700px] mx-auto mb-12 leading-[1.7]">
-            Multilingual BPO services that actually help you grow your business globally.
-          </p>
-          
-          <a
-            href="#who-we-are"
-            class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1E3A5F] font-semibold rounded-full hover:bg-[#67E8F9] transition-colors duration-300 text-[15px]">
+      <PageHeader 
+      heading="About Defirlex" 
+      title='Breaking Language Barriers'
+      image="https://cdn.prod.website-files.com/687904fb2b26c434698c47e9/68e311765f5241a3d356f305_314b597993ae3f81ca355bfa6eb4b708_courses-hero.webp"
+      description="Building Real Connections, Multilingual BPO services that actually help you grow your business globally."
+      buttons={[
+        {
+          link: '#who-we-are',
+          name: 'Learn Our Story'
+        }
+      ]}
+      />
 
-            Learn Our Story
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-      </section>
 
       <section id="who-we-are" class="py-[100px] md:py-[140px] px-6 bg-white">
         <div class="max-w-[1000px] mx-auto">

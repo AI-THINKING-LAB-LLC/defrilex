@@ -1,0 +1,45 @@
+---
+const { heading, description, title, buttons, image } = Astro.props;
+---
+
+<section class="relative overflow-hidden pt-48 pb-32">
+    <div class="px-10">
+        <div class="max-w-[86rem] mx-auto w-full">
+            <div class="flex flex-col gap-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div class="flex-col justify-center items-start flex gap-6">
+                        <div class="gap-2 uppercase justify-start items-center flex font-semibold text-base">
+                            <div>— {heading}</div>
+                        </div>
+                        <h1 class="text-[5rem] leading-none font-normal my-0 tracking-normal" set:html={title}>
+                            
+                        </h1>
+                        <p>
+                            {description}
+                        </p>
+                        <div class="flex items-center justify-start relative gap-4">
+                            {!!buttons?.[0] ? (
+                                <a href={buttons[0].link} class="bg-[#00003d] rounded-4xl py-3 px-6 inline-block">
+                                <div class="text-white">{buttons[0].name}</div>
+                            </a>
+                            ): null}
+                            {!!buttons?.[1] ? (
+                                <a href={buttons[1].link} data-wf-event-ids="" class="border border-[#00003d] rounded-4xl py-3 px-6 inline-block">
+                                <div class="button_txt">
+                                    {buttons[1].name}
+                                </div>
+                            </a>
+                            ) : null}
+                        </div>
+                    </div>
+                    <div class="flex overflow-hidden max-h-[530px] relative flex-col justify-between rounded-[.6rem] items-stretch">
+                        <img 
+                        class="object-cover w-full h-full" 
+                        src={image} width="1276" height="1220" alt="" sizes="(max-width: 1276px) 100vw, 1276px" loading="eager" fetchpriority="high" 
+                       >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

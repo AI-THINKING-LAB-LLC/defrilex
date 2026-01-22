@@ -3,6 +3,7 @@ import { ArrowRight, Building2, Check, Clock, Facebook, Globe, Headphones, Linke
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/navigation";
 import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/page-header.astro";
 
 const capabilities = [
 { label: "Languages", value: "300+ languages and dialects" },
@@ -31,22 +32,21 @@ const processSteps = [
     <main class="min-h-screen bg-[#F8FAFC]">
     <Navigation  client:load/>
     
-    <section class="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden pt-[160px] pb-[80px]">
-      <div class="absolute inset-0 bg-linear-to-br from-[#00003d] via-[#1E3A5F] to-[#3B82F6]" />
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-      
-      <div class="container relative z-10 px-6 max-w-[900px] text-center">
-        <h1 class="text-[42px] sm:text-[52px] md:text-[62px] lg:text-[72px] font-bold text-white leading-[1.05] tracking-[-0.03em] mb-8">
-          Get In Touch
-        </h1>
-        
-        <p class="text-[17px] md:text-[20px] text-white/80 leading-[1.8] max-w-[700px] mx-auto">
-          Whether you need multilingual BPO services, healthcare interpretation, legal translation, or 24/7 customer support across borders—let's talk about how Defrilex can help.
-        </p>
-      </div>
-    </section>
+    <PageHeader 
+      heading="Contact" 
+      title='Get In Touch'
+      image="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description="Whether you need multilingual BPO services, healthcare interpretation, legal translation, or 24/7 customer support across borders—let's talk about how Defrilex can help."
+      buttons={[
+        {
+          link: '#contact-us',
+          name: 'Contact us'
+        }
+      ]}
+      />
+   
 
-    <section class="py-[80px] md:py-[100px] px-6 bg-white">
+    <section class="py-[80px] md:py-[100px] px-6 bg-white" id="contact-us">
       <div class="max-w-[1200px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
@@ -204,12 +204,12 @@ const processSteps = [
       </div>
     </section>
 
-    <section class="py-[100px] md:py-[140px] px-6 bg-linear-to-br from-[#00003d] via-[#1E3A5F] to-[#3B82F6]">
+    <section class="py-[100px] md:py-[140px] px-6 bg-[#f0f0f0]">
       <div class="max-w-[900px] mx-auto text-center">
-        <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold text-white leading-[1.1] mb-6">
+        <h2 class="text-[32px] md:text-[42px] lg:text-[48px] font-bold leading-[1.1] mb-6">
           Ready to Break Language Barriers?
         </h2>
-        <p class="text-[16px] md:text-[18px] text-white/70 max-w-[600px] mx-auto leading-[1.7] mb-10">
+        <p class="text-[16px] md:text-[18px] text-neutral-950/70 max-w-[600px] mx-auto leading-[1.7] mb-10">
           Whether you're handling a one-time project or need an ongoing partnership, Defrilex delivers multilingual BPO services that actually work.
         </p>
         <a
@@ -221,44 +221,6 @@ const processSteps = [
         </a>
       </div>
     </section>
-
-    <section class="py-[60px] px-6 bg-white border-t border-[#E5E5E5]">
-      <div class="max-w-[1200px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div class="flex items-center gap-4 mb-4">
-              <Clock className="w-6 h-6 text-[#00003d]" />
-              <h3 class="text-[20px] font-bold text-[#1A1A1A]">Office Hours</h3>
-            </div>
-            <p class="text-[15px] text-[#6B7280] mb-2">
-              While our client services operate 24/7, our administrative offices are open:
-            </p>
-            <p class="text-[15px] text-[#1A1A1A] font-medium">
-              Monday-Friday: 9 AM - 6 PM EST
-            </p>
-            <p class="text-[15px] text-[#ef9c31] font-medium">
-              Emergency support: Always available
-            </p>
-          </div>
-          
-          <div class="flex flex-col md:items-end">
-            <h3 class="text-[18px] font-bold text-[#1A1A1A] mb-4">Follow Us</h3>
-            <div class="flex gap-4">
-              <a href="#" class="w-12 h-12 rounded-full bg-[#00003d]/10 flex items-center justify-center hover:bg-[#00003d] hover:text-white transition-all text-[#00003d]">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" class="w-12 h-12 rounded-full bg-[#00003d]/10 flex items-center justify-center hover:bg-[#00003d] hover:text-white transition-all text-[#00003d]">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" class="w-12 h-12 rounded-full bg-[#00003d]/10 flex items-center justify-center hover:bg-[#00003d] hover:text-white transition-all text-[#00003d]">
-                <Facebook className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <Footer />
   </main>
   </Layout>
