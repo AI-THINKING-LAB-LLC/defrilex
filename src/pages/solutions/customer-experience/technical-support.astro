@@ -1,7 +1,7 @@
 ---
-import Navigation from "../../../components/navigation";
+import { ArrowRight, BookOpen, CheckCircle, Clock, Laptop, Lightbulb, Server, Shield, Smartphone, Wrench } from "lucide-react";
 import Footer from "../../../components/Footer.astro";
-import { Wrench, Clock, Shield, BookOpen, Laptop, Server, Smartphone, CheckCircle, ArrowRight, Lightbulb } from "lucide-react";
+import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
 
 const features = [
@@ -59,7 +59,7 @@ const benefits = [
 ---
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
-      <Navigation />
+      <Navigation client:load/>
       
       <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#EFF6FF] via-[#DBEAFE] to-[#E0F2FE]" />

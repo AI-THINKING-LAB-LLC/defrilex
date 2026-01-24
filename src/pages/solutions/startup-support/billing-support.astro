@@ -1,8 +1,8 @@
 ---
 
-import Navigation from "../../../components/navigation";
+import { AlertTriangle, ArrowRight, Building2, CheckCircle, Clock, FileText, Receipt, Rocket, ShoppingCart, TrendingUp } from "lucide-react";
 import Footer from "../../../components/Footer.astro";
-import { Receipt, TrendingUp, Clock, FileText, Rocket, Building2, ShoppingCart, CheckCircle, ArrowRight, AlertTriangle } from "lucide-react";
+import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
 
 const includedServices = [
@@ -62,7 +62,7 @@ const industries = [
 ---
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
-      <Navigation />
+      <Navigation client:load/>
       
       <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#F5F3FF] via-[#EDE9FE] to-[#DDD6FE]" />

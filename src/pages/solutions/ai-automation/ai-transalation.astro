@@ -1,8 +1,8 @@
 ---
 
-import Navigation from "../../../components/navigation";
+import { ArrowRight, CheckCircle, FileText, Globe, Languages, Shield, Sparkles, Users } from "lucide-react";
 import Footer from "../../../components/Footer.astro";
-import { Languages, Zap, Users, Shield, Globe, FileText, Clock, CheckCircle, ArrowRight, Sparkles } from "lucide-react";
+import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
 
 const howItWorks = [
@@ -58,7 +58,7 @@ const businessImpact = [
 ---
   <Layout>
       <main class="min-h-screen bg-[#F0F0FF]">
-      <Navigation />
+      <Navigation client:load/>
       
       <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]" />

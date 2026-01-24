@@ -1,8 +1,8 @@
 ---
 
-import Navigation from "../../../components/navigation";
+import { ArrowRight, Award, BarChart3, Building2, CheckCircle, Clock, Headphones, HeartPulse, ShoppingCart, Users } from "lucide-react";
 import Footer from "../../../components/Footer.astro";
-import { Headphones, Users, Clock, BarChart3, ShoppingCart, Building2, HeartPulse, CheckCircle, ArrowRight, Award } from "lucide-react";
+import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
 
 const features = [
@@ -61,7 +61,7 @@ const benefits = [
 
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
-      <Navigation />
+      <Navigation client:load/>
       
       <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#FFF7ED] via-[#FEF3E2] to-[#FDF2F8]" />

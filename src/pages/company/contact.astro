@@ -30,7 +30,7 @@ const processSteps = [
 ---
   <Layout>
     <main class="min-h-screen ">
-    <Navigation  client:load/>
+    <Navigation client:load/>
     
     <PageHeader 
       heading="Contact" 
@@ -225,18 +225,63 @@ const processSteps = [
         </div>
       </div>
 
-      <form class="lg:ml-auto space-y-4">
-        <input type='text' placeholder='Name'
+      <form id="contact-form" class="lg:ml-auto space-y-4">
+        <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Name" required
           class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
-        <input type='email' placeholder='Email'
+        <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="Email" required
           class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
-        <input type='text' placeholder='Subject'
+        <input id="contact-subject" name="subject" type="text" placeholder="Subject" required
           class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
-        <textarea placeholder='Message' rows="6"
+        <textarea id="contact-message" name="message" placeholder="Message" rows="6" required
           class="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-sm pt-3 border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent"></textarea>
-        <button type='button'
+        <button type="submit"
           class="text-white bg-slate-900 hover:bg-slate-800 tracking-wide rounded-md text-sm font-medium px-4 py-3 w-full cursor-pointer !mt-2 border-0">Send message</button>
       </form>
+      <script is:inline>
+        (() => {
+          const form = document.getElementById("contact-form");
+          if (!form) return;
+
+          const TO_EMAIL = "info@defrilex.com";
+
+          const safe = (v) => (typeof v === "string" ? v.trim() : "");
+
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = safe(document.getElementById("contact-name")?.value);
+            const email = safe(document.getElementById("contact-email")?.value);
+            const subjectInput = safe(document.getElementById("contact-subject")?.value);
+            const message = safe(document.getElementById("contact-message")?.value);
+
+            const subject = subjectInput || "Website contact form";
+            const bodyLines = [
+              "New website contact form submission",
+              "",
+              `Name: ${name || "-"}`,
+              `Email: ${email || "-"}`,
+              "",
+              "Message:",
+              message || "-"
+            ];
+            const body = bodyLines.join("\n");
+
+            const gmailUrl =
+              "https://mail.google.com/mail/?view=cm&fs=1" +
+              `&to=${encodeURIComponent(TO_EMAIL)}` +
+              `&su=${encodeURIComponent(subject)}` +
+              `&body=${encodeURIComponent(body)}`;
+
+            const mailtoUrl =
+              `mailto:${encodeURIComponent(TO_EMAIL)}` +
+              `?subject=${encodeURIComponent(subject)}` +
+              `&body=${encodeURIComponent(body)}`;
+
+            const newWindow = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+            if (!newWindow) window.location.href = mailtoUrl;
+          });
+        })();
+      </script>
     </div>
     <section class="py-[80px] md:py-[100px] px-6 bg-[#FAFAFA]">
       <div class="max-w-[1200px] mx-auto">
