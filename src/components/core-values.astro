@@ -1,5 +1,5 @@
 ---
-import { Users, DollarSign, Calculator, Database, ArrowRight } from 'lucide-react';
+import { ArrowRight, Calculator, Database, DollarSign, Users } from 'lucide-react';
 
 const services = [
   { icon: Users, label: 'HR Outsourcing', color: '#10B981' },
@@ -19,8 +19,8 @@ const services = [
     <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         <div class="w-full lg:w-[55%] order-2 lg:order-1">
         <div class="relative">
-            <div class="absolute -inset-4 bg-linear-to-r from-[#C1E1D2] to-[#D1D1FF] rounded-[32px] blur-2xl opacity-40" />
-            <div class="relative rounded-[20px] md:rounded-[28px] bg-linear-to-br from-[#C1E1D2] to-[#B8D9C7] p-5 md:p-8 lg:p-10 xl:p-12 shadow-xl">
+            <div class="absolute -inset-4 bg-linear-to-r from-[#e1d4c1] to-[#fff0d1] rounded-[32px] blur-2xl opacity-40" />
+            <div class="relative rounded-[20px] md:rounded-[28px] bg-linear-to-br from-[#e1d4c1] to-[#fff0d1] p-5 md:p-8 lg:p-10 xl:p-12 shadow-xl">
             <div class="mb-4 md:mb-6 inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 shadow-sm">
                 <span class="w-2 h-2 rounded-full bg-[#ef9c31] animate-pulse" />
                 <span class="text-[11px] md:text-[13px] font-bold text-[#1A1A1A] uppercase tracking-wider">Who we are</span>
@@ -58,10 +58,10 @@ const services = [
                 <p class="text-[13px] md:text-[14px] lg:text-[15px] leading-[1.7] text-[#4A4A4A] mb-4 md:mb-6">
                 We believe in building strong relationships between businesses and their customers partnerships that drive mutual success and lasting growth.
                 </p>
-                <button class="group inline-flex items-center gap-2 text-[13px] md:text-[14px] font-bold text-[#1A1A1A] hover:text-[#2D5A3D] transition-colors">
+                <a href="/company/about" class="group inline-flex items-center gap-2 text-[13px] md:text-[14px] font-bold text-[#1A1A1A] hover:text-[#2D5A3D] transition-colors">
                 Learn more about us
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                </a>
             </div>
             </div>
         </div>
