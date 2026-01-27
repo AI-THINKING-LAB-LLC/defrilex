@@ -4,6 +4,7 @@ import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/navigation";
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/page-header.astro";
+import ContactLocation from "../../components/contact-location";
 
 const capabilities = [
 { label: "Languages", value: "300+ languages and dialects" },
@@ -44,8 +45,7 @@ const processSteps = [
         }
       ]}
       />
-   
-
+  
     <section class="py-[80px] md:py-[100px] px-6 bg-white" id="contact-us">
       <div class="max-w-[1200px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -104,6 +104,8 @@ const processSteps = [
         </div>
       </div>
     </section>
+
+    <ContactLocation client:load/>
 
     <section class="py-[80px] md:py-[100px] px-6 bg-[#FAFAFA]">
       <div class="max-w-[1200px] mx-auto">
