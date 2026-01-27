@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Clock, Globe, Headphones, HeartPulse, Phone, S
 import Footer from "../../../components/Footer.astro";
 import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const features = [
   {
@@ -60,43 +61,19 @@ const benefits = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
-      
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#F0F0FF] via-[#E8E8FF] to-[#F5F0FF]" />
-        <div class="absolute top-20 left-10 w-72 h-72 bg-[#ef9c31]/10 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#D1D1FF]/40 rounded-full blur-3xl" />
-        
-        <div class="container relative z-10 px-6 max-w-[1000px]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[#ef9c31]/10 px-5 py-2.5 mb-8">
-            <Phone className="w-4 h-4 text-[#ef9c31]" />
-            <span class="text-[13px] font-bold text-[#ef9c31] uppercase tracking-wider">Remote Interpretation</span>
-          </div>
-          
-          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
-            Over-the-Phone
-            <span class="block text-[#ef9c31]">Interpretation</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-            Instant access to professional interpreters in 300+ languages. Connect your team and customers across language barriers in seconds, not minutes.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#quote"
-              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#ef9c31] transition-colors duration-300 text-center text-[15px]"
-            >
-              Request a Quote
-            </a>
-            <a
-              href="#features"
-              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#ef9c31] hover:text-[#ef9c31] transition-all duration-300 text-center text-[15px]"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </section>
+      <SolutionHeader 
+      heading="Over-the-Phone"
+      heading2="Interpretation"
+      heading3="in 300+ Languages"
+      interpreters="300+"
+      image="https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description="Connect your team and customers across language barriers in seconds, not minutes."
+      buttons={[
+        { name: "Request a Quote", link: "#quote" },
+        { name: "Learn More", link: "#features" }
+      ]}
+      />
+
 
       <section id="features" class="py-[100px] md:py-[140px] px-6">
         <div class="max-w-[1200px] mx-auto">

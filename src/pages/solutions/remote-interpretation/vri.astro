@@ -3,6 +3,7 @@ import Navigation from "../../../components/navigation";
 import Footer from "../../../components/Footer.astro";
 import { Video, Monitor, Users, Wifi, HeartPulse, Scale, Building2, CheckCircle, ArrowRight, Eye } from "lucide-react";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const features = [
   {
@@ -60,43 +61,19 @@ const benefits = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
-      
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#F0F0FF] via-[#E0E8FF] to-[#F0E8FF]" />
-        <div class="absolute top-20 right-20 w-80 h-80 bg-[#3B82F6]/10 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
-        
-        <div class="container relative z-10 px-6 max-w-[1000px]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[#3B82F6]/10 px-5 py-2.5 mb-8">
-            <Video className="w-4 h-4 text-[#3B82F6]" />
-            <span class="text-[13px] font-bold text-[#3B82F6] uppercase tracking-wider">Remote Interpretation</span>
-          </div>
+      <SolutionHeader 
+      heading="Video Remote"
+      heading2="Interpretation"
+      heading3="in 300+ Languages"
+      interpreters="300+"
+      image="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=90"
+      description="Face-to-face interpretation without the travel. See and be seen for richer, more accurate communication across 300+ languages."
+      buttons={[
+        { name: "Request a Quote", link: "#quote" },
+        { name: "See How It Works", link: "#features" }
+      ]}
+      />
           
-          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
-            Video Remote
-            <span class="block text-[#3B82F6]">Interpretation</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-            Face-to-face interpretation without the travel. See and be seen for richer, more accurate communication across 300+ languages.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#quote"
-              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#3B82F6] transition-colors duration-300 text-center text-[15px]"
-            >
-              Request a Quote
-            </a>
-            <a
-              href="#features"
-              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#3B82F6] hover:text-[#3B82F6] transition-all duration-300 text-center text-[15px]"
-            >
-              See How It Works
-            </a>
-          </div>
-        </div>
-      </section>
 
       <section id="features" class="py-[100px] md:py-[140px] px-6">
         <div class="max-w-[1200px] mx-auto">
