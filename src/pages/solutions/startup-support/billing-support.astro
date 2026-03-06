@@ -4,6 +4,7 @@ import { AlertTriangle, ArrowRight, Building2, CheckCircle, Clock, FileText, Rec
 import Footer from "../../../components/Footer.astro";
 import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const includedServices = [
   "Invoice generation and distribution",
@@ -63,43 +64,19 @@ const industries = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
+      <SolutionHeader  
+      heading="Billing Support"
+      heading2="That Keeps Cash Flowing"
+      interpreters="50+"
+      peopleType="Revenue Operations Specialists"
+      image="https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlsbGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+      description="Professional billing management to streamline your financial operations and accelerate collections."
+      buttons={[
+        { name: "Schedule a Consultation", link: "#consultation" },
+        { name: "Learn More", link: "#challenge" }
+      ]}
+      />
       
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#F5F3FF] via-[#EDE9FE] to-[#DDD6FE]" />
-        <div class="absolute top-20 left-20 w-80 h-80 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#A78BFA]/15 rounded-full blur-3xl" />
-        
-        <div class="container relative z-10 px-6 max-w-[1000px]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-5 py-2.5 mb-8">
-            <Receipt className="w-4 h-4 text-[#8B5CF6]" />
-            <span class="text-[13px] font-bold text-[#8B5CF6] uppercase tracking-wider">Startup Support</span>
-          </div>
-          
-          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
-            Billing That Keeps
-            <span class="block text-[#8B5CF6]">Cash Flowing</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-            Professional billing management to streamline your financial operations and accelerate collections—so you can focus on building, not invoicing.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#consultation"
-              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#8B5CF6] transition-colors duration-300 text-center text-[15px]"
-            >
-              Schedule a Consultation
-            </a>
-            <a
-              href="#challenge"
-              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300 text-center text-[15px]"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </section>
 
       <section id="challenge" class="py-[100px] md:py-[140px] px-6 bg-white">
         <div class="max-w-[1000px] mx-auto">
