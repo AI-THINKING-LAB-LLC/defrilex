@@ -3,6 +3,7 @@ import { ArrowRight, BarChart3, Bot, Brain, CheckCircle, Clock, Settings, Workfl
 import Footer from "../../../components/Footer.astro";
 import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const howItWorks = [
   {
@@ -57,44 +58,18 @@ const businessImpact = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
-      
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155]" />
-        <div class="absolute top-20 left-20 w-80 h-80 bg-[#06B6D4]/20 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-3xl" />
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
-        
-        <div class="container relative z-10 px-6 max-w-[1000px]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[#06B6D4]/20 px-5 py-2.5 mb-8 border border-[#06B6D4]/30">
-            <Bot className="w-4 h-4 text-[#06B6D4]" />
-            <span class="text-[13px] font-bold text-[#06B6D4] uppercase tracking-wider">AI Automation</span>
-          </div>
-          
-          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-white leading-[1.05] tracking-[-0.02em] mb-8">
-            AI Chatbots That
-            <span class="block bg-gradient-to-r from-[#06B6D4] to-[#8B5CF6] bg-clip-text text-transparent">Actually Work</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-white/70 max-w-[680px] mx-auto mb-12 leading-[1.7]">
-            24/7 intelligent automation that handles customer inquiries, qualifies leads, and delivers instant answers—powered by AI that understands your business.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#cta"
-              class="w-full sm:w-auto px-10 py-4.5 bg-gradient-to-r from-[#06B6D4] to-[#8B5CF6] text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 text-center text-[15px]"
-            >
-              Automate Your Workflow Today
-            </a>
-            <a
-              href="#how-it-works"
-              class="w-full sm:w-auto px-10 py-4.5 bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-center text-[15px]"
-            >
-              See How It Works
-            </a>
-          </div>
-        </div>
-      </section>
+      <SolutionHeader  
+      heading="AI Chatbots"
+      heading2="That Actually Work"
+      interpreters="50+"
+      peopleType="Chatbots"
+      image="https://images.unsplash.com/photo-1762328862557-e0a36587cd3c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description="24/7 intelligent automation that handles customer inquiries, qualifies leads, and delivers instant answers—powered by AI that understands your business."
+      buttons={[
+        { name: "Automate Your Workflow", link: "#quote" },
+        { name: "See How It Works", link: "#solution" }
+      ]}
+      />
 
       <section id="how-it-works" class="py-[100px] md:py-[140px] px-6 bg-white">
         <div class="max-w-[1200px] mx-auto">
