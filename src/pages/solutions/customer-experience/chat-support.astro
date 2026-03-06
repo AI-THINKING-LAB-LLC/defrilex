@@ -4,6 +4,7 @@ import { ArrowRight, Bot, Building2, CheckCircle, Clock, MessageCircle, Plane, S
 import Footer from "../../../components/Footer.astro";
 import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const features = [
   {
@@ -61,44 +62,18 @@ const benefits = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
-      
-      <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#FDF4FF] via-[#FAE8FF] to-[#F5E0FF]" />
-        <div class="absolute top-20 right-20 w-80 h-80 bg-[#A855F7]/10 rounded-full blur-3xl" />
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-[#C084FC]/15 rounded-full blur-3xl" />
-        
-        <div class="container relative z-10 px-6 max-w-[1000px]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[#A855F7]/10 px-5 py-2.5 mb-8">
-            <MessageCircle className="w-4 h-4 text-[#A855F7]" />
-            <span class="text-[13px] font-bold text-[#A855F7] uppercase tracking-wider">Customer Experience</span>
-          </div>
-          
-          <h1 class="text-[40px] sm:text-[52px] md:text-[60px] lg:text-[68px] font-bold text-[#1A1A1A] leading-[1.05] tracking-[-0.02em] mb-8">
-            Chat Support
-            <span class="block text-[#A855F7]">That Converts</span>
-          </h1>
-          
-          <p class="text-[17px] md:text-[19px] lg:text-[21px] text-[#4A4A4A] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-            Real-time chat assistance providing instant solutions to customer inquiries. Turn browsers into buyers with responsive, helpful conversations.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#quote"
-              class="w-full sm:w-auto px-10 py-4.5 bg-[#1A1A1A] text-white font-semibold rounded-full hover:bg-[#A855F7] transition-colors duration-300 text-center text-[15px]"
-            >
-              Launch Chat Support
-            </a>
-            <a
-              href="#solution"
-              class="w-full sm:w-auto px-10 py-4.5 bg-white text-[#1A1A1A] font-semibold rounded-full border-2 border-[#1A1A1A]/10 hover:border-[#A855F7] hover:text-[#A855F7] transition-all duration-300 text-center text-[15px]"
-            >
-              See How It Works
-            </a>
-          </div>
-        </div>
-      </section>
-
+      <SolutionHeader  
+      heading="Chat Support"
+      heading2="That Converts"
+      interpreters="50+"
+      peopleType="Chat Agents"
+      image="https://images.unsplash.com/photo-1552068751-34cb5cf055b3?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description="Real-time chat assistance providing instant solutions to customer inquiries. Turn browsers into buyers with responsive, helpful conversations."
+      buttons={[
+        { name: "Launch Chat Support", link: "#quote" },
+        { name: "See How It Works", link: "#solution" }
+      ]}
+      />
       <section id="solution" class="py-[100px] md:py-[140px] px-6">
         <div class="max-w-[1200px] mx-auto">
           <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">

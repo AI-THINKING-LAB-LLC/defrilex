@@ -1,7 +1,7 @@
 ---
-const { heading, heading2, heading3, description, buttons, image, interpreters } = Astro.props;
+const { heading, heading2, heading3, description, buttons, image, interpreters, peopleType = 'Interpreters' } = Astro.props;
 ---
-<div class="min-h-scr w-full flex items-center justify-center pb-4 px-4 lg:pb-8 lg:px-8 pt-28 bg-[#F3F4F6]">
+<div class="min-h-scr w-full flex items-center justify-center pb-4 px-4 lg:pb-8 lg:px-8 pt-32 bg-[#F3F4F6]">
 <div class="bg-white w-full max-w-[1400px] rounded-[3rem] shadow-xl overflow-hidden p-6 lg:p-10 relative">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[500px]">
     {/* Left Content Card */}
@@ -49,7 +49,7 @@ const { heading, heading2, heading3, description, buttons, image, interpreters }
               </div>
             ))}
           </div>
-          <span class="text-brand-dark font-semibold">{interpreters} Certified Interpreters</span>
+          <span class="text-brand-dark font-semibold">{interpreters} Certified {peopleType}</span>
         </div>
       </div>
     </div>

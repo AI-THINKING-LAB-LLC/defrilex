@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, CheckCircle, Clock, Laptop, Lightbulb, Server, Sh
 import Footer from "../../../components/Footer.astro";
 import Navigation from "../../../components/navigation";
 import Layout from "../../../layouts/Layout.astro";
+import SolutionHeader from "../../../components/solution-header.astro";
 
 const features = [
   {
@@ -60,6 +61,18 @@ const benefits = [
 <Layout>
     <main class="min-h-screen bg-[#F0F0FF]">
       <Navigation client:load/>
+      <SolutionHeader  
+      heading="Technical Support"
+      heading2="That Actually Solves"
+      interpreters="50+"
+      peopleType="Technicians"
+      image="https://images.unsplash.com/photo-1632910121591-29e2484c0259?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      description="Expert technical assistance to resolve issues quickly and keep your operations running smoothly. From Tier 1 to Tier 3, we've got you covered."
+      buttons={[
+        { name: "Get Technical Support", link: "#quote" },
+        { name: "Our Approach", link: "#solution" }
+      ]}
+      />
       
       <section class="relative min-h-[85vh] flex flex-col items-center justify-center text-center overflow-hidden pt-[160px] pb-[100px]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#EFF6FF] via-[#DBEAFE] to-[#E0F2FE]" />
